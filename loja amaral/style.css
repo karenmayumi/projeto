@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    /* border: 1px solid #ff000063; */
+    color: #fff;
+    font-size: 12px;
+}
+header{
+    width: 100vw;
+    height: 80vh;
+
+}
+.hfh{
+    background-image: linear-gradient(180deg, #020202, #ffae3513);
+    border: none;
+    height: 13vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left, .header-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    padding: 0px 25px;
+}
+.header-left{
+    align-items: center;
+}
+.header-mais span{
+    display: flex;
+    padding: 2px 7px;
+}
+.seta{
+    transform: rotate(90deg);
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.seta{
+    translate: 0px 1px;
+    transition: 0.4s;
+}
+.mais:hover .seta{
+    color: #a30101;
+    transform: rotate(45deg);
+    transition: 0.4s;
+}
+.hpi{
+    text-decoration: none;
+    border-radius: 17px;
+    border: 1.5px solid #fff;
+    transition: 0.4s;
+}
+
+.hpi:hover{
+    border-radius: 20px;
+    background-color: #fff;
+    color: #a30101;
+    transition: 0.4s;
+}
+.regist, .entrar{
+    padding: 3px 12px;
+    border-radius: 17px;
+}
+.img-header-icon{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.hsf{
+    background-image: linear-gradient(90deg, #e08823, #e45151);
+    color: #ffffff;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hsf span{
+    transform: translateY(10vh);
+    text-align: center;
+    width: 200px;
+
+}
