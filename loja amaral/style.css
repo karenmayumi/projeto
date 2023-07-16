@@ -5,7 +5,7 @@
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     /* border: 1px solid #ff000063; */
     color: #fff;
-    font-size: 12px;
+    font-size: 22px;
 }
 header{
     width: 100vw;
@@ -13,7 +13,7 @@ header{
 
 }
 .hfh{
-    background-image: linear-gradient(180deg, #020202, #ffae3513);
+    background-image: linear-gradient(180deg, #1e004198, #74460081, #ffae3500);
     border: none;
     height: 13vh;
     width: 100vw;
@@ -32,12 +32,11 @@ header{
 .header-left{
     align-items: center;
 }
+.header-mais{
+    padding: 1px 13px;
+}
 .header-mais span{
     display: flex;
-    padding: 2px 7px;
-}
-.seta{
-    transform: rotate(90deg);
 }
 .header-right{
     display: flex;
@@ -45,23 +44,32 @@ header{
     justify-content: end;
 }
 .seta{
-    translate: 0px 1px;
+    transform: rotate(90deg);
+    translate: 4px 1px;
     transition: 0.4s;
+}
+.mais{
+    transition: 0.4s;
+}
+.mais:hover{
+    color: #a30101;
+    transition: 0.4s;
+    cursor: pointer;
 }
 .mais:hover .seta{
     color: #a30101;
     transform: rotate(45deg);
-    transition: 0.4s;
 }
 .hpi{
     text-decoration: none;
-    border-radius: 17px;
+    border-radius: 20px;
     border: 1.5px solid #fff;
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .hpi:hover{
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: #fff;
     color: #a30101;
     transition: 0.4s;
@@ -88,6 +96,6 @@ header{
 .hsf span{
     transform: translateY(10vh);
     text-align: center;
-    width: 200px;
+    width: 350px;
 
 }
