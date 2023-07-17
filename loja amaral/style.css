@@ -7,6 +7,9 @@
     color: #fff;
     font-size: 22px;
 }
+body{
+    background-color: #ceced4;
+}
 header{
     width: 100vw;
     height: 80vh;
@@ -61,36 +64,38 @@ header{
     position: fixed;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-around;
     margin-top: 13vh;
     background-image:linear-gradient(120deg, #d45151, #d47a56);
-    background-color: #b84f4bf8;
     border-radius: 0px 15px 15px 0px;
-    padding: 25px 50px 25px 15px;
+    padding: 25px 50px 25px 10px;
     box-sizing: border-box;
     overflow: hidden;
     width: 80px;
+    height: 350px;
     transition: 0.5s;
 }
 .mais-menu:hover{
     width:300px;
-    transition: 0.5s;
+    transition: 0.2s;
     
 }
 
 .menu-item{
     display: flex;
     align-items: center;
+    height:60px;
     gap: 0px 25px;
     padding: 5px;
     border-radius: 5px 15px 15px 5px;
     transition: 0.2s;
 }
 .menu-item-icon{
-    height: 50px;
+    height: 45px;
+    transition: 0.4s;
 }
 .item-link{
-    color: #fdb0c5b4;
+    color: #e9d2d8b4;
     font-size: 20px;
     text-decoration: none;
     min-width: 150px;
@@ -99,14 +104,20 @@ header{
     transition: 0.2s;
 }
 .menu-item:hover{
-    background-color: #fffaae7e;
+    background-color: #bdba9146;
     transition: 0.5s;
-    font-size: 21px;
+    cursor: pointer;
 }
 .menu-item:hover .item-link{
     color: #ffebfe;
+    text-decoration:underline;
+    transition: 0.5s;
 }
-
+.menu-item:hover .menu-item-icon{
+    height: 50px;
+    transform: rotate(10deg);
+    transition: 0.3s;
+}
 .hsf{
     background-image: linear-gradient(90deg, #e08823, #e45151);
     color: #ffffff;
@@ -122,4 +133,6 @@ header{
 }
 main{
     height: 2000px;
+    width: 100vw;
+    background-color: #c0c0d4;
 }
