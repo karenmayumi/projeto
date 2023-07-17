@@ -82,12 +82,15 @@ header{
     display: flex;
     align-items: center;
     gap: 0px 25px;
+    padding: 5px;
+    border-radius: 5px 15px 15px 5px;
+    transition: 0.2s;
 }
 .menu-item-icon{
     height: 50px;
 }
 .item-link{
-    background-color: #b43e3e;
+    color: #fdb0c5b4;
     font-size: 20px;
     text-decoration: none;
     min-width: 150px;
@@ -95,10 +98,13 @@ header{
     border-radius: 5px;
     transition: 0.2s;
 }
-.item-link:hover{
-    background-color: #970404;
+.menu-item:hover{
+    background-color: #fffaae7e;
     transition: 0.5s;
     font-size: 21px;
+}
+.menu-item:hover .item-link{
+    color: #ffebfe;
 }
 
 .hsf{
