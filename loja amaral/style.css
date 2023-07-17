@@ -129,6 +129,7 @@ header{
 .hsf span{
     text-align: center;
     width: 350px;
+    cursor:default;
 
 }
 main{
