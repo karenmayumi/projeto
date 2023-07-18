@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes aqui!</title>
+</head>
+<body>
+    
+<!-- Swiper -->
+
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="https://img.freepik.com/fotos-gratis/variedade-de-pedacos-de-bolo_114579-28274.jpg?w=740&t=st=1689639560~exp=1689640160~hmac=99c833357245cdd7d426cd720a00e5e24c53b17a0cb8d619e7e8de56816d4a8b" alt="imagem-bolos" class="header-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://cdn.pixabay.com/photo/2015/05/07/15/08/cookie-756601_1280.jpg" alt="imagem-cookie-acucar-coracao" class="header-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://cdn.pixabay.com/photo/2017/05/07/08/56/pancakes-2291908_640.jpg" alt="panquecas-com-molho" class="header-img">
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    
+  </div>
+
+
+  <!-- /////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////// -->
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  cssMode: true,
+  keyboard: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+  
+});
+  </script>
+
+</body>
+</html>

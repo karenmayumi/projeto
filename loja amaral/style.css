@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    /* border: 1px solid #00a2ff63; */
+    border: 1px solid #00a2ff63;
     color: #fff;
     font-size: 22px;
 }
@@ -125,7 +125,17 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
+.swiper{
+    width: 600px;
+    height: 300px;
+  }
+.header-img{
+    width: 150px;
+    height: 120px;
+}
+
 .hsf span{
     text-align: center;
     width: 350px;

@@ -1,0 +1,12 @@
+body{
+    background-color: bisque;
+    box-sizing: border-box;
+}
+.swiper {
+    width: 100vw;
+    height: 100vh;
+  }
+  .header-img{
+    width: 100vw;
+    height: 80vh;
+  }
