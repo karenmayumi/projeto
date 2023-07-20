@@ -145,10 +145,12 @@ main{
 .card-item{
     width: 200px;
     height: min-content;
+    aspect-ratio: 5 / 7;
     box-shadow: inset 0px 0px 90px #c7caf1, 0px 0px 10px #683347;
     background-color: #f7f7f7;
     border-radius: 10px;
     overflow: hidden;
+    margin-top: 50px;
   }
   .ci-promocao{
     position: absolute;
@@ -168,15 +170,13 @@ main{
         background-position: 100% 100%;
     }
   }
-  .ci-img{
-    object-fit: cover;
-  }
   .ci-img img{
+    object-fit: cover;
     width: 200px;
     aspect-ratio: 4 / 3;
   }
   .ci-info{
-    padding: 10px;
+    padding: 0px 10px;
   }
   .cii-title{
     font-size: 19px;

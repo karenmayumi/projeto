@@ -68,12 +68,14 @@ body{
 ////////////////  ITEM 2   /////////////////
 /////////////////////////////////////////// */
 
-.item-2{
+.item-2,.item-3{
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.item-2{
   background-color: #e2fffd;
 }
 .i2-container{
@@ -94,6 +96,25 @@ body{
     background-position: 100% 100%;
   }
 }
-.i2-text{
-  
+.item-3{
+  background-color: #eec1bd;
+}
+.sectionPromo{
+  position: relative;
+  display: flex;
+  background: yellow;
+  color: red;
+  width: min-content;
+}
+.triangulos{
+  position: absolute;
+  right: -13%;
+}
+.triangulo{
+  background-color: #771006;
+  width: 150px; 
+  height: 150px; 
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-left: 22px solid rgb(153, 147, 235);
 }
