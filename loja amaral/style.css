@@ -3,17 +3,17 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    border: 1px solid #00a2ff63;
-    color: #fff;
-    font-size: 22px;
+    /* border: 1px solid #00a2ff63; */
 }
 body{
     background-color: #ceced4;
 }
+/* ///////////////////////////////////////////
+////////////////   Header   /////////////////
+/////////////////////////////////////////// */
 header{
     width: 100vw;
     height: 80vh;
-
 }
 .header-first-half{
     background-image: linear-gradient(180deg, #1e004198, #74460081, #ffae3500);
@@ -33,13 +33,12 @@ header{
 .header-left{
     align-items: center;
 }
-
 .header-right{
     align-items: center;
     justify-content: end;
 }
-
 .hpi{
+    color: #fff;
     text-decoration: none;
     padding: 3px 12px;
     border-radius: 20px;
@@ -47,7 +46,6 @@ header{
     transition: 0.4s;
     cursor: pointer;
 }
-
 .hpi:hover{
     border-radius: 25px;
     background-color: #fff;
@@ -58,10 +56,9 @@ header{
     width: 55px;
     height: 55px;
 }
-
-
 .mais-menu{
     position: fixed;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -80,7 +77,6 @@ header{
     transition: 0.2s;
     
 }
-
 .menu-item{
     display: flex;
     align-items: center;
@@ -127,8 +123,6 @@ header{
     justify-content: center;
 
 }
-
-
 .hsf span{
     text-align: center;
     width: 350px;
@@ -139,4 +133,68 @@ main{
     height: 2000px;
     width: 100vw;
     background-color: #c0c0d4;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
+
+/* ///////////////////////////////////////////
+////////////////Cards da Loja/////////////////
+/////////////////////////////////////////// */
+
+.card-item{
+    width: 200px;
+    height: min-content;
+    box-shadow: inset 0px 0px 90px #c7caf1, 0px 0px 10px #683347;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .ci-promocao{
+    position: absolute;
+    color: #ff0000;
+    border-radius: 0px 60px 5px 0px;
+    padding: 2px 10px;
+    transform: translateY(10px);
+    background-image: linear-gradient(90deg, #ffee00, #ffc964,#ffee00, #ffc964);
+    background-size: 300% 300%;
+    animation: promocao-animation 2.5s linear infinite;
+  }
+  @keyframes promocao-animation{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 100% 100%;
+    }
+  }
+  .ci-img{
+    object-fit: cover;
+  }
+  .ci-img img{
+    width: 200px;
+    aspect-ratio: 4 / 3;
+  }
+  .ci-info{
+    padding: 10px;
+  }
+  .cii-title{
+    font-size: 19px;
+  }
+  .cii-parag{
+    font-size: 13px;
+  }
+  .cii-precos{
+    display: flex;
+    align-items:flex-end;
+  }
+  .ciip-atual{
+    font-size: 22px;
+    color: #d4685e;
+  }
+  .ciip-anterior{
+    font-size: 12px;
+    color: #771006;
+    text-decoration:line-through;
+    translate: 5px -3px;
+  }
