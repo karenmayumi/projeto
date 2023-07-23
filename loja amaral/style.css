@@ -12,14 +12,14 @@ body{
 ////////////////   Header   /////////////////
 /////////////////////////////////////////// */
 header{
-    width: 100vw;
+    width: 100%;
     height: 80vh;
 }
 .header-first-half{
     background-image: linear-gradient(180deg, #1e004198, #74460081, #ffae3500);
     border: none;
     height: 13vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     display: flex;
     align-items: center;
@@ -63,7 +63,8 @@ header{
     flex-direction: column;
     justify-content: space-around;
     margin-top: 13vh;
-    background-image:linear-gradient(120deg, #d45151, #d47a56);
+    background-image:linear-gradient(180deg, #d45151da, #566dd460);
+    backdrop-filter: blur(5.5px);
     border-radius: 0px 15px 15px 0px;
     padding: 25px 50px 25px 10px;
     box-sizing: border-box;
@@ -91,7 +92,7 @@ header{
     transition: 0.4s;
 }
 .item-link{
-    color: #e9d2d8b4;
+    color: #180107b4;
     font-size: 20px;
     text-decoration: none;
     min-width: 150px;
@@ -100,12 +101,12 @@ header{
     transition: 0.2s;
 }
 .menu-item:hover{
-    background-color: #bdba9146;
+    background-color: #d4c9b4a1;
     transition: 0.5s;
     cursor: pointer;
 }
 .menu-item:hover .item-link{
-    color: #ffebfe;
+    color: #50054c;
     text-decoration:underline;
     transition: 0.5s;
 }
@@ -131,7 +132,7 @@ header{
 }
 main{
     height: 200vh;
-    width: 100vw;
+    width: 100%;
     background-color: #c0c0d4;
     display: flex;
     flex-wrap: wrap;
@@ -141,16 +142,24 @@ main{
 ////////////////Cards da Loja/////////////////
 /////////////////////////////////////////// */
 
+#cards{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+}
 .card-item{
     min-width: min-content;
     width: 200px;
-    height: 300px;
+    height: 320px;
     box-shadow: inset 0px 0px 90px #c7caf1, 0px 0px 10px #683347;
     overflow: hidden;
     background-color: #f7f7f7;
     border-radius: 10px;
-    margin-top: 50px;
     cursor: default;
+    padding: 0 0 10px 0;
   }
   .ci-promocao{
     position: absolute;
@@ -172,21 +181,23 @@ main{
   }
   .ci-img img{
     object-fit: cover;
-    width: 200px;
+    width: 100%;
     aspect-ratio: 4 / 3;
   }
   .ci-info{
-    padding: 0px 10px;
+    height:165px;
+    padding: 0 10px 5px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-between;
   }
   .cii-title{
-    font-size: 19px;
+    font-size: 20px;
   }
-  .cii-parag{
-    font-size: 13px;
+  .ciit-tipo, .cii-parag{
+    font-size: 12.5px;
   }
+
   .cii-precos{
     display: flex;
     align-items:flex-end;
@@ -199,7 +210,7 @@ main{
     font-size: 12px;
     color: #771006;
     text-decoration:line-through;
-    margin: 0px 0px 3px 3px;
+    margin: 0 0 3px 3px;
   }
   .card-mais{
     display: flex;
@@ -208,12 +219,28 @@ main{
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    background-color: #c98a2c;
+    color: #cde4e7;
+    transition: 0.3s;
   }
   .cm-seta{
     transform: rotate(90deg);
     margin-left: 5px;
   }
   .card-mais:hover{
-    background-color: #e973557c;
-    transition: 0.3s;
+    transition: 0.5s;
+    color: #f2f2f8;
+    background-color: #449167;
   }
+  .card-mais:focus{
+    background-color: #66b88b;
+    color: #f2f2f8;
+    transition: 0.2s;
+  }
+
+  /* ///////////////////////////////////////////
+////////////////    A Side    /////////////////
+/////////////////////////////////////////// */
+aside{
+  background-color: RED;
+}
