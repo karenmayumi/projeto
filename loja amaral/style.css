@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    /* border: 1px solid #00a2ff63; */
+    border: 1px solid #00a2ff63;
 }
 body{
     background-color: #ceced4;
@@ -151,15 +151,14 @@ main{
   padding: 20px;
 }
 .card-item{
-    min-width: min-content;
     width: 200px;
-    height: 320px;
+    height: 350px;
+    aspect-ratio: 4 / 7;
     box-shadow: inset 0px 0px 90px #c7caf1, 0px 0px 10px #683347;
-    overflow: hidden;
     background-color: #f7f7f7;
     border-radius: 10px;
+    overflow:hidden;
     cursor: default;
-    padding: 0 0 10px 0;
   }
   .ci-promocao{
     position: absolute;
@@ -184,29 +183,29 @@ main{
     width: 100%;
     aspect-ratio: 4 / 3;
   }
-  .ci-info{
-    height:165px;
-    padding: 0 10px 5px 10px;
+  .ci-desc{
+    height:200px;
+    padding: 0 10px 10px 10px;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
   }
-  .cii-title{
+  .cidi-title{
     font-size: 20px;
   }
-  .ciit-tipo, .cii-parag{
+  .cidi-parag{
     font-size: 12.5px;
   }
 
-  .cii-precos{
+  .cidb-values{
     display: flex;
     align-items:flex-end;
   }
-  .ciip-atual{
+  .cidbv-now{
     font-size: 22px;
-    color: #d4685e;
+    color: #d1685e;
   }
-  .ciip-anterior{
+  .cidbv-last{
     font-size: 12px;
     color: #771006;
     text-decoration:line-through;
