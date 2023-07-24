@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    border: 1px solid #00a2ff63;
+    /* border: 1px solid #00a2ff63; */
 }
 body{
     background-color: #ceced4;
@@ -152,7 +152,7 @@ main{
 }
 .card-item{
     width: 200px;
-    height: 350px;
+    height: 335px;
     aspect-ratio: 4 / 7;
     box-shadow: inset 0px 0px 90px #c7caf1, 0px 0px 10px #683347;
     background-color: #f7f7f7;
@@ -162,6 +162,7 @@ main{
   }
   .ci-promocao{
     position: absolute;
+    z-index: 1;
     color: #ff0000;
     clip-path: polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%);
     padding: 2px 25px 2px 10px;
@@ -182,10 +183,11 @@ main{
     object-fit: cover;
     width: 100%;
     aspect-ratio: 4 / 3;
+    transform: scale(1.1);
   }
   .ci-desc{
-    height:200px;
-    padding: 0 10px 10px 10px;
+    height:190px;
+    padding: 0 10px 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -212,6 +214,7 @@ main{
     margin: 0 0 3px 3px;
   }
   .card-mais{
+    width: 100%;
     display: flex;
     justify-content: center;
     background: none;
