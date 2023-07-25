@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento pra facilitar</title>
+
+    <style>
+
+    #payment{
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(160deg, #488d78, #0c4850);
+    margin-top: 50px;
+    }
+    #select-payment{
+        border: none;
+        padding: 0.3em 0.75em;
+        margin: 50px;
+        pointer-events:stroke
+    }
+    #select-payment:hover{
+        cursor:pointer;
+    }
+    </style>
+
+</head>
+<body>
+    
+    <article id="payment">
+
+        <label for="Definir área de pagamento" class="main-title mt2">
+            <h1>Pague aqui! ;)</h1>
+        </label>
+
+        <section class="payment-content">
+
+            <select id="select-payment">
+                <option selected disabled>Selecione aqui</option>
+                <option value="pix">Pix</option>
+                <option value="picpay">PicPay</option>
+                <option value="paypal">PayPal</option>
+                <option value="crtcredito">Cartão de crédito</option>
+                <option value="crtdebito">Cartão de débito</option>
+                <option value="boletobanc">Boleto Bancário</option>
+                <option value="criptomoeda">Criptomoeda</option>
+                <option value="orgaos">Órgãos</option>
+                <option value="xerecard">Xerecard</option>
+                <option value="fototeta">Fototeta</option>
+                
+            </select>
+
+        </section>
+
+
+    </article>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    border: 1px solid #00a2ff63;
+    /* border: 1px solid #00a2ff63; */
 }
 body{
     background-color: #ceced4;
