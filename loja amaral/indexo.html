@@ -7,21 +7,40 @@
     <title>Documento pra facilitar</title>
 
     <style>
-
+        *{
+        border: 1px solid red;
+    }
     #payment{
     height: 80vh;
     width: 100%;
     background-image: linear-gradient(160deg, #488d78, #0c4850);
     margin-top: 50px;
     }
+    .payment-content{
+        
+    display: flex;
+    flex-direction: column;
+    }
     #select-payment{
         border: none;
         padding: 0.3em 0.75em;
         margin: 50px;
+        background-color: #0c4850;
+        color: aliceblue;
+        cursor: pointer;
     }
-    #select-payment:hover{
-        cursor:pointer;
+    #select-payment option{
+        background-color: #0a3d44;
     }
+    .payment-infos{
+        background-color: #0a3d44;
+        border-radius: 15px;
+    }
+    .payment-infos div{
+        color: #fff;
+    }
+    
+    
     </style>
 
 </head>
@@ -29,14 +48,13 @@
     
     <article id="payment">
 
-        <label for="Definir área de pagamento" class="main-title mt2">
+        
             <h1>Pague aqui! ;)</h1>
-        </label>
 
         <section class="payment-content">
 
             <select id="select-payment">
-                <option selected disabled>Selecione aqui</option>
+                    <option selected disabled>Selecione aqui</option>
                 <option value="pix">Pix</option>
                 <option value="picpay">PicPay</option>
                 <option value="paypal">PayPal</option>
@@ -60,30 +78,43 @@
              <img src="#" alt="qrcode do pix">
            </div>
             <div id="info-picpay" class="info-item">
-              
+              picpay
             </div>
             <div id="info-paypal" class="info-item">
               
             </div>
             <div id="info-cardc" class="info-item">
-              
+              cardc
             </div>
             <div id="info-cardd" class="info-item">
-              
+              cardd
             </div>
             <div id="info-boleto" class="info-item">
-              
+              boleto
             </div>
             <div id="info-crip" class="info-item">
-              
+              criptomoeda
             </div>
             <div id="info-organs" class="info-item">
-              
+              orgaos
+            </div>
+            <div id="info-xerecard" class="info-item">
+                xerecard
+            </div>
+            <div id="info-cucard" class="info-item">
+                cucard
+            </div>
+            <div id="info-fototeta" class="info-item">
+                fototeta
+            </div>
+            <div id="info-boquete" class="info-item">
+                boquete
             </div>
           </div>
           
         </section>
 
+        <section class="payment-contato"></section>
 
     </article>
 
