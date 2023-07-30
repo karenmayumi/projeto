@@ -8,7 +8,13 @@
 
     <style>
         *{
-        border: 1px solid red;
+          margin: 0;
+          padding: 0;
+          border: 1px solid red;
+          box-sizing: border-box;
+          }
+    body{
+      overflow-x: hidden;
     }
     #payment{
     height: 80vh;
@@ -16,11 +22,7 @@
     background-image: linear-gradient(160deg, #488d78, #0c4850);
     margin-top: 50px;
     }
-    .payment-content{
-        
-    display: flex;
-    flex-direction: column;
-    }
+    
     #select-payment{
         border: none;
         padding: 0.3em 0.75em;
@@ -35,11 +37,34 @@
     .payment-infos{
         background-color: #0a3d44;
         border-radius: 15px;
+        display: flex;
+        width: 20em;
+        height: 20em;
     }
-    .payment-infos div{
+    .info-item{
         color: #fff;
+        min-width: 20em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 20px;
+        
     }
-    
+    #tutorial-item img{
+      width: 125px;
+    }
+    #tutorial-item p{
+      text-align: center;
+
+    }
+    #pix-code-text{
+      text-decoration: underline;
+      color: #4d93d4;
+    }
+    #pix-code-text:hover{
+      color: #71c3e9;
+    }
     
     </style>
 
@@ -68,12 +93,19 @@
                 <option value="boquete">Boquete</option>
             </select>
 
+            <input type="text" id="input-test">
           
           <div class="payment-infos">
             
+           <div id="tutorial-item" class="info-item">
+            <p>Olá! Inicie o processo de pagamento selecionando qual método você deseja utilizar selecionando na área acima.
+              Assim que for escolhido, aqui aparecerá as informações para continuar a sua compra!
+            </p>
+            <img src="/loja amaral/img/emoji-sorrindo.png" alt="Emoji sorrindo">
+           </div>
            <div id="info-pix" class="info-item">
              <span>
-               Pague por esse qrcode
+               Pague por esse qrcode ou copie o código <span id="pix-code-text">clicando aqui</span>
              </span>
              <img src="#" alt="qrcode do pix">
            </div>
@@ -81,7 +113,7 @@
               picpay
             </div>
             <div id="info-paypal" class="info-item">
-              
+              paypal
             </div>
             <div id="info-cardc" class="info-item">
               cardc
@@ -117,6 +149,20 @@
         <section class="payment-contato"></section>
 
     </article>
+    <script>
+
+    //   só choro
+    // let select = document.querySelector('#input-text')
+    
+    // if (select == 'pix') ? select.style.backgroundColor = 'blue' : select.style.backgroundColor = 'red'
+
+    // const allcards = document.querySelector('.info-item')
+     
+    // allcards.addEventListener('click',()=>{
+    //     allcards.style.translate = '-20em';
+    //   })
+
+    </script>
 
 </body>
 </html>
