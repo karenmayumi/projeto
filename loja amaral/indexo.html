@@ -43,11 +43,15 @@
         /* background-color: #0a3d44; */
       background-image: linear-gradient(90deg, #a1d1cc, #809ad3);
       border-radius: 15px;
-      display: flex;
       width: 20em;
       height: 20em;
+      overflow: hidden;
     }
-    
+    #allcards{
+      display: flex;
+      translate: 0;
+      
+    }
     .info-item{
         min-width: 20em;
         display: flex;
@@ -61,6 +65,7 @@
     .info-item img{
       width: 125px;
     }
+    
     #tutorial-item p{
       text-align: center;
 
@@ -88,113 +93,107 @@
 
             <select id="select-payment">
                     <option selected disabled>Selecione aqui</option>
-                <option value="pix">Pix</option>
-                <option value="picpay">PicPay</option>
-                <option value="paypal">PayPal</option>
-                <option value="credito">Cartão de crédito</option>
-                <option value="debito">Cartão de débito</option>
-                <option value="boleto">Boleto Bancário</option>
-                <option value="criptomoeda">Criptomoeda</option>
-                <option value="orgaos">Órgãos</option>
-                <option value="xerecard">Xerecard</option>
-                <option value="fototeta">Fototeta</option>
-                <option value="boquete">Boquete</option>
+                <option value="1">Pix</option>
+                <option value="2">PicPay</option>
+                <option value="3">PayPal</option>
+                <option value="4">Cartão de crédito</option>
+                <option value="5">Cartão de débito</option>
+                <option value="6">Boleto Bancário</option>
+                <option value="7">Criptomoeda</option>
+                <option value="8">Órgãos</option>
+                <option value="9">Xerecard</option>
+                <option value="10">Fototeta</option>
+                <option value="11">Boquete</option>
             </select>
 
             <input type="text" id="input-test">
           
           <div class="payment-infos">
             
-           <div id="tutorial-item" class="info-item">
-            <p>Olá! Inicie o processo de pagamento selecionando qual método você deseja utilizar selecionando na área acima.
-            </p>
-            <p>Assim que for escolhido, aqui aparecerá as informações para continuar a sua compra!
-            </p>
-            <img src="/loja amaral/img/emoji-sorrindo.png" alt="Emoji sorrindo">
-           </div>
-           <div id="info-pix" class="info-item">
-             <span>
-               Pague por esse qrcode ou copie o código <span id="pix-code-text">clicando aqui</span>
-             </span>
-             <img src="/loja amaral/img/qrcode-do-testepix.png" alt="qrcode do pix">
-           </div>
-            <div id="info-picpay" class="info-item">
-              <img src="/loja amaral/img/icons-pay/icon-picpay.png" alt="imagem picpay">
-              <p>
-                Não tenho PicPay... Selecione outro método de pagamento!
-              </p>
-            </div>
-            <div id="info-paypal" class="info-item">
-              <img src="/loja amaral/img/icons-pay/icon-paypal.png" alt="imagem paypal">
-              <p>
-                Não tenho PayPal... Selecione outro método de pagamento!
-              </p>
-            </div>
-            <div id="info-cardc" class="info-item">
-              <img src="/loja amaral/img/icons-pay/icon-card.png" alt="imagem cartão">
-              <p>
-                Não tenho maquininha... Selecione outro método de pagamento!
-              </p>
-            </div>
-            <div id="info-cardd" class="info-item">
-              <img src="/loja amaral/img/icons-pay/icon-card.png" alt="imagem cartão">
-              <p>
-                Não tenho maquininha... Selecione outro método de pagamento!
-              </p>
-            </div>
-            <div id="info-boleto" class="info-item">
-              boleto
-              <img src="/loja amaral/img/icons-pay/icon-boleto.png" alt="imagem boleto">
-              <p>
-                Vsf, ainda tem quem use boleto bancário?
-              </p>
-            </div>
-            <div id="info-crip" class="info-item">
-              <img src="/loja amaral/img/icons-pay/icon-criptomoeda.png" alt="imagem criptomoeda">
-              <p>
-                K.
-              </p>
-            </div>
-            <div id="info-organs" class="info-item">
-              orgãos
-              <p>
-                Endereço: **********************
-              </p>
-            </div>
-            <div id="info-xerecard" class="info-item">
-                xerecard
-                <p>
-                  Endereço: **********************
-                  Contato:
-                  -Número: (16) 99739-8604
-                  -Email: mariadesouzaw1@gmail.com
+            <div id="allcards">
+              <div id="tutorial-item" class="info-item">
+                <p>Olá! Inicie o processo de pagamento selecionando qual método você deseja utilizar selecionando na área acima.
                 </p>
-            </div>
-            <div id="info-cucard" class="info-item">
-                cucard
-                <p>
-                  Endereço: **********************
-                  Contato:
-                  -Número: (16) 99739-8604
-                  -Email: mariadesouzaw1@gmail.com
+                <p>Assim que for escolhido, aqui aparecerá as informações para continuar a sua compra!
                 </p>
-            </div>
-            <div id="info-fototeta" class="info-item">
-                fototeta
-                <p>
-                  Contato:
-                  -Número: (16) 99739-8604
-                  -Email: mariadesouzaw1@gmail.com
-                </p>
-            </div>
-            <div id="info-boquete" class="info-item">
-                boquete
-                <p>
-                  Endereço: **********************
-                  Contato:
-                  -Número: (16) 99739-8604
-                  -Email: mariadesouzaw1@gmail.com
-                </p>
+                <img src="/loja amaral/img/emoji-sorrindo.png" alt="Emoji sorrindo">
+              </div>
+              <div id="info-pix" class="info-item">
+                <span>
+                  Pague por esse qrcode ou copie o código <span id="pix-code-text">clicando aqui</span>
+                </span>
+                <img src="/loja amaral/img/qrcode-do-testepix.png" alt="qrcode do pix">
+              </div>
+                <div id="info-picpay" class="info-item">
+                  <img src="/loja amaral/img/icons-pay/icon-picpay.png" alt="imagem picpay">
+                  <p>
+                    Não tenho PicPay... Selecione outro método de pagamento!
+                  </p>
+                </div>
+                <div id="info-paypal" class="info-item">
+                  <img src="/loja amaral/img/icons-pay/icon-paypal.png" alt="imagem paypal">
+                  <p>
+                    Não tenho PayPal... Selecione outro método de pagamento!
+                  </p>
+                </div>
+                <div id="info-cardc" class="info-item">
+                  <img src="/loja amaral/img/icons-pay/icon-card.png" alt="imagem cartão">
+                  <p>
+                    Não tenho maquininha... Selecione outro método de pagamento!
+                  </p>
+                </div>
+                <div id="info-cardd" class="info-item">
+                  <img src="/loja amaral/img/icons-pay/icon-card.png" alt="imagem cartão">
+                  <p>
+                    Não tenho maquininha... Selecione outro método de pagamento!
+                  </p>
+                </div>
+                <div id="info-boleto" class="info-item">
+                  boleto
+                  <img src="/loja amaral/img/icons-pay/icon-boleto.png" alt="imagem boleto">
+                  <p>
+                    Vsf, ainda tem quem use boleto bancário?
+                  </p>
+                </div>
+                <div id="info-crip" class="info-item">
+                  <img src="/loja amaral/img/icons-pay/icon-criptomoeda.png" alt="imagem criptomoeda">
+                  <p>
+                    K.
+                  </p>
+                </div>
+                <div id="info-organs" class="info-item">
+                  orgãos
+                  <p>
+                    Endereço: **********************
+                  </p>
+                </div>
+                <div id="info-xerecard" class="info-item">
+                    xerecard
+                    <p>
+                      Endereço: **********************
+                      Contato:
+                      -Número: (16) 99739-8604
+                      -Email: mariadesouzaw1@gmail.com
+                    </p>
+                </div>
+                <div id="info-fototeta" class="info-item">
+                    fototeta
+                    <p>
+                      Contato:
+                      -Número: (16) 99739-8604
+                      -Email: mariadesouzaw1@gmail.com
+                    </p>
+                </div>
+                <div id="info-boquete" class="info-item">
+                    boquete
+                    <p>
+                      Endereço: **********************
+                      Contato:
+                      -Número: (16) 99739-8604
+                      -Email: mariadesouzaw1@gmail.com
+                    </p>
+                </div>
+              
             </div>
           </div>
           
@@ -208,63 +207,67 @@
 
       let select_payment = document.querySelector("#select-payment")
       let inpute = document.querySelector('#input-test')
-    let allcardpay = document.getElementsByClassName('.info-item')
+      let allcardpay = document.querySelector('#allcards')
     
-      
       select_payment.addEventListener('change',()=>{
 
          let option_select = select_payment.value
-        // console.log(option_select) <-- testar o valor que está no options pelo console
+         console.log(option_select)
+        //  <-- testar o valor que está no options pelo console
+
+
+
+
 
         switch(option_select){
-        case 'pix':
+        case '1':
           inpute.value = 'pix'
-          allcardpay.style.backgroundColor = 'red'
+          allcardpay.style.translate = '-20em'
           break;
-        case 'picpay':
+        case '2':
           inpute.value = 'picpay'
           allcardpay.style.translate = '-40em'
           break;
-        case 'paypal':
+        case '3':
           inpute.value = 'paypal'
           allcardpay.style.translate = '-60em'
           break;
-        case 'credito':
+        case '4':
           inpute.value = 'crédito'
+          allcardpay.style.translate = '-80em'
           break;
-        case 'debito':
+        case '5':
           inpute.value = 'debito'
+          allcardpay.style.translate = '-100em'
           break;
-        case 'boleto':
+        case '6':
           inpute.value = 'boleto'
+          allcardpay.style.translate = '-120em'
           break;
-        case 'criptomoeda':
+        case '7':
           inpute.value = 'criptomoeda'
+          allcardpay.style.translate = '-140em'
           break;
-        case 'orgaos':
+        case '8':
           inpute.value = 'órgãos'
+          allcardpay.style.translate = '-160em'
           break;
-        case 'xerecard':
+        case '9':
           inpute.value = 'xerecard'
+          allcardpay.style.translate = '-180em'
           break;
-        case 'fototeta':
+        case '10':
           inpute.value = 'fototeta'
+          allcardpay.style.translate = '-200em'
           break;
-        case 'boquete':
+        case '11':
           inpute.value = 'boquete'
+          allcardpay.style.translate = '-220em'
           break;
         default:
         inpute.value = 'erro!'
-      }
-
-
-      })
-
-      setInterval
-
-
+      }})
 
   </script>
-
 </body>
 </html>
