@@ -49,7 +49,6 @@
     }
     #allcards{
       display: flex;
-      translate: 0;
       
     }
     .info-item{
@@ -215,58 +214,8 @@
          console.log(option_select)
         //  <-- testar o valor que está no options pelo console
 
-
-
-
-
-        switch(option_select){
-        case '1':
-          inpute.value = 'pix'
-          allcardpay.style.translate = '-20em'
-          break;
-        case '2':
-          inpute.value = 'picpay'
-          allcardpay.style.translate = '-40em'
-          break;
-        case '3':
-          inpute.value = 'paypal'
-          allcardpay.style.translate = '-60em'
-          break;
-        case '4':
-          inpute.value = 'crédito'
-          allcardpay.style.translate = '-80em'
-          break;
-        case '5':
-          inpute.value = 'debito'
-          allcardpay.style.translate = '-100em'
-          break;
-        case '6':
-          inpute.value = 'boleto'
-          allcardpay.style.translate = '-120em'
-          break;
-        case '7':
-          inpute.value = 'criptomoeda'
-          allcardpay.style.translate = '-140em'
-          break;
-        case '8':
-          inpute.value = 'órgãos'
-          allcardpay.style.translate = '-160em'
-          break;
-        case '9':
-          inpute.value = 'xerecard'
-          allcardpay.style.translate = '-180em'
-          break;
-        case '10':
-          inpute.value = 'fototeta'
-          allcardpay.style.translate = '-200em'
-          break;
-        case '11':
-          inpute.value = 'boquete'
-          allcardpay.style.translate = '-220em'
-          break;
-        default:
-        inpute.value = 'erro!'
-      }})
+        allcardpay.style.translate = (-20 * parseInt(option_select)) + 'em'
+    })
 
   </script>
 </body>
