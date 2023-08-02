@@ -58,9 +58,9 @@
         align-items: center;
         justify-content: space-evenly;
         padding: 20px;
-        position: relative;
-        
+        position: relative; 
     }
+    
     .info-item img{
       width: 125px;
     }
@@ -110,63 +110,63 @@
           <div class="payment-infos">
             
             <div id="allcards">
-              <div id="tutorial-item" class="info-item">
+              <div id="tutorial-item" class="info-item info-item2">
                 <p>Olá! Inicie o processo de pagamento selecionando qual método você deseja utilizar selecionando na área acima.
                 </p>
                 <p>Assim que for escolhido, aqui aparecerá as informações para continuar a sua compra!
                 </p>
                 <img src="/loja amaral/img/emoji-sorrindo.png" alt="Emoji sorrindo">
               </div>
-              <div id="info-pix" class="info-item">
+              <div id="info-pix" class="info-item info-item2">
                 <span>
                   Pague por esse qrcode ou copie o código <span id="pix-code-text">clicando aqui</span>
                 </span>
                 <img src="/loja amaral/img/qrcode-do-testepix.png" alt="qrcode do pix">
               </div>
-                <div id="info-picpay" class="info-item">
+                <div id="info-picpay" class="info-item info-item2">
                   <img src="/loja amaral/img/icons-pay/icon-picpay.png" alt="imagem picpay">
                   <p>
                     Não tenho PicPay... Selecione outro método de pagamento!
                   </p>
                 </div>
-                <div id="info-paypal" class="info-item">
+                <div id="info-paypal" class="info-item info-item2">
                   <img src="/loja amaral/img/icons-pay/icon-paypal.png" alt="imagem paypal">
                   <p>
                     Não tenho PayPal... Selecione outro método de pagamento!
                   </p>
                 </div>
-                <div id="info-cardc" class="info-item">
+                <div id="info-cardc" class="info-item info-item2">
                   <img src="/loja amaral/img/icons-pay/icon-card.png" alt="imagem cartão">
                   <p>
                     Não tenho maquininha... Selecione outro método de pagamento!
                   </p>
                 </div>
-                <div id="info-cardd" class="info-item">
+                <div id="info-cardd" class="info-item info-item2">
                   <img src="/loja amaral/img/icons-pay/icon-card.png" alt="imagem cartão">
                   <p>
                     Não tenho maquininha... Selecione outro método de pagamento!
                   </p>
                 </div>
-                <div id="info-boleto" class="info-item">
+                <div id="info-boleto" class="info-item info-item2">
                   boleto
                   <img src="/loja amaral/img/icons-pay/icon-boleto.png" alt="imagem boleto">
                   <p>
                     Vsf, ainda tem quem use boleto bancário?
                   </p>
                 </div>
-                <div id="info-crip" class="info-item">
+                <div id="info-crip" class="info-item info-item2">
                   <img src="/loja amaral/img/icons-pay/icon-criptomoeda.png" alt="imagem criptomoeda">
                   <p>
                     K.
                   </p>
                 </div>
-                <div id="info-organs" class="info-item">
+                <div id="info-organs" class="info-item info-item2">
                   orgãos
                   <p>
                     Endereço: **********************
                   </p>
                 </div>
-                <div id="info-xerecard" class="info-item">
+                <div id="info-xerecard" class="info-item info-item2">
                     xerecard
                     <p>
                       Endereço: **********************
@@ -175,7 +175,7 @@
                       -Email: mariadesouzaw1@gmail.com
                     </p>
                 </div>
-                <div id="info-fototeta" class="info-item">
+                <div id="info-fototeta" class="info-item info-item2">
                     fototeta
                     <p>
                       Contato:
@@ -183,7 +183,7 @@
                       -Email: mariadesouzaw1@gmail.com
                     </p>
                 </div>
-                <div id="info-boquete" class="info-item">
+                <div id="info-boquete" class="info-item info-item2">
                     boquete
                     <p>
                       Endereço: **********************
@@ -204,17 +204,16 @@
 
   <script>
 
-      let select_payment = document.querySelector("#select-payment")
-      let inpute = document.querySelector('#input-test')
-      let allcardpay = document.querySelector('#allcards')
-    
+
+      const inpute = document.querySelector('#input-test')
+      const allcardpay = document.querySelector('#allcards')
+      const select_payment = document.querySelector("#select-payment")
+      
       select_payment.addEventListener('change',()=>{
-
          let option_select = select_payment.value
-         console.log(option_select)
+        // console.log(option_select)
         //  <-- testar o valor que está no options pelo console
-
-        allcardpay.style.translate = (-20 * parseInt(option_select)) + 'em'
+        allcardpay.style.translate = (-20 * option_select) + 'em'
     })
 
   </script>
