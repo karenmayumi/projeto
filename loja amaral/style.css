@@ -258,7 +258,7 @@ main{
   }
 
   /* /////////////////////////////////////////
-///////////////     ASide    ////////////////
+///////////////     ASide    ////////////////grid
 ///////////////////////////////////////// */
 
   aside{
@@ -283,7 +283,7 @@ main{
     width: 200px;
     transform: scaleX(-1);
     position: sticky;
-    top: 50px;
+    top: 250px;
   }
 
   /* /////////////////////////////////////////
@@ -295,5 +295,57 @@ main{
   width: 100%;
   background-image: linear-gradient(160deg, #488d78, #0c4850);
   margin-top: 50px;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  #select-payment, #select-payment option{
+      border: none;
+      padding: 0.3em 0.75em;
+      margin: 50px;
+      background-color: #0c4850;
+      color: aliceblue;
+      cursor: pointer;
+  }
+  
+  .payment-infos{
+      /* background-color: #0a3d44; */
+    background-image: linear-gradient(90deg, #a1d1cc, #809ad3);
+    border-radius: 15px;
+    width: 20em;
+    height: 20em;
+    overflow: hidden;
+  }
+  #allcards{
+    display: flex;
+    
+  }
+  .info-item{
+      min-width: 20em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 20px;
+      position: relative; 
+  }
+  
+  .info-item img{
+    width: 125px;
+  }
+  
+  #tutorial-item p{
+    text-align: center;
+
+  }
+  #pix-code-text{
+    text-decoration: underline;
+    color: #4d93d4;
+    cursor: pointer;
+  }
+  #pix-code-text:hover{
+    color: #71c3e9;
+  }
 

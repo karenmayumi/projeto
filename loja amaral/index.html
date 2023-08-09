@@ -429,35 +429,131 @@
         </article>
         
         <article id="payment">
-
-            <label for="Definir área de pagamento" class="main-title mt2">
-                <h1>Pague aqui! ;)</h1>
-            </label>
-
-            <section class="payment-content">
-
-                <input type="week" name="" id="">
-
-            </section>
-
-
-        </article>
-
-        
+            <h1>Pague aqui! ;)</h1>
+        <section class="payment-content">
+            <select id="select-payment">
+                    <option selected disabled>Selecione aqui</option>
+                <option value="1">Pix</option>
+                <option value="2">PicPay</option>
+                <option value="3">PayPal</option>
+                <option value="4">Cartão de crédito</option>
+                <option value="5">Cartão de débito</option>
+                <option value="6">Boleto Bancário</option>
+                <option value="7">Criptomoeda</option>
+                <option value="8">Órgãos</option>
+                <option value="9">Xerecard</option>
+                <option value="10">Fototeta</option>
+                <option value="11">Boquete</option>
+            </select>
+            <input type="text" id="input-test">
+          <div class="payment-infos">
+            <div id="allcards">
+              <div id="tutorial-item" class="info-item info-item2">
+                <p>Olá! Inicie o processo de pagamento selecionando qual método você deseja utilizar selecionando na área acima.
+                </p>
+                <p>Assim que for escolhido, aqui aparecerá as informações para continuar a sua compra!
+                </p>
+                <img src="/loja amaral/img/emoji-sorrindo.png" alt="Emoji sorrindo">
+              </div>
+              <div id="info-pix" class="info-item info-item2">
+                <span>
+                  Pague por esse qrcode ou copie o código <span id="pix-code-text">clicando aqui</span>
+                </span>
+                <img src="/loja amaral/img/qrcode-do-testepix.png" alt="qrcode do pix">
+              </div>
+                <div id="info-picpay" class="info-item info-item2">
+                  <img src="/loja amaral/img/icons-pay/icon-picpay.png" alt="imagem picpay">
+                  <p>
+                    Não tenho PicPay... Selecione outro método de pagamento!
+                  </p>
+                </div>
+                <div id="info-paypal" class="info-item info-item2">
+                  <img src="/loja amaral/img/icons-pay/icon-paypal.png" alt="imagem paypal">
+                  <p>
+                    Não tenho PayPal... Selecione outro método de pagamento!
+                  </p>
+                </div>
+                <div id="info-cardc" class="info-item info-item2">
+                  <img src="/loja amaral/img/icons-pay/icon-card.png" alt="imagem cartão">
+                  <p>
+                    Não tenho maquininha... Selecione outro método de pagamento!
+                  </p>
+                </div>
+                <div id="info-cardd" class="info-item info-item2">
+                  <img src="/loja amaral/img/icons-pay/icon-card.png" alt="imagem cartão">
+                  <p>
+                    Não tenho maquininha... Selecione outro método de pagamento!
+                  </p>
+                </div>
+                <div id="info-boleto" class="info-item info-item2">
+                  boleto
+                  <img src="/loja amaral/img/icons-pay/icon-boleto.png" alt="imagem boleto">
+                  <p>
+                    Vsf, ainda tem quem use boleto bancário?
+                  </p>
+                </div>
+                <div id="info-crip" class="info-item info-item2">
+                  <img src="/loja amaral/img/icons-pay/icon-criptomoeda.png" alt="imagem criptomoeda">
+                  <p>
+                    K.
+                  </p>
+                </div>
+                <div id="info-organs" class="info-item info-item2">
+                  orgãos
+                  <p>
+                    Endereço: **********************
+                  </p>
+                </div>
+                <div id="info-xerecard" class="info-item info-item2">
+                    xerecard
+                    <p>
+                      Endereço: **********************
+                      Contato:
+                      -Número: (16) 99739-8604
+                      -Email: mariadesouzaw1@gmail.com
+                    </p>
+                </div>
+                <div id="info-fototeta" class="info-item info-item2">
+                    fototeta
+                    <p>
+                      Contato:
+                      -Número: (16) 99739-8604
+                      -Email: mariadesouzaw1@gmail.com
+                    </p>
+                </div>
+                <div id="info-boquete" class="info-item info-item2">
+                    boquete
+                    <p>
+                      Endereço: **********************
+                      Contato:
+                      -Número: (16) 99739-8604
+                      -Email: mariadesouzaw1@gmail.com
+                    </p>
+                </div>
+              
+            </div>
+          </div>
+        </section>
+    </article>
     </main>
-
-
-
-
-
-
     <script>
-
         const mi1 = document.querySelector(".menu-item-1").addEventListener("click",()=>{window.location.href = "https://www.youtube.com/"})
         const mi2 = document.querySelector(".menu-item-2").addEventListener("click",()=>{window.location.href = "https://www.youtube.com/"})
         const mi3 = document.querySelector(".menu-item-3").addEventListener("click",()=>{window.location.href = "https://www.youtube.com/"})
         const mi4 = document.querySelector(".menu-item-4").addEventListener("click",()=>{window.location.href = "https://www.youtube.com/"})
         const mi5 = document.querySelector(".menu-item-5").addEventListener("click",()=>{window.location.href = "https://www.youtube.com/"})
+
+        const inpute = document.querySelector('#input-test')
+        const allcardpay = document.querySelector('#allcards')
+        const select_payment = document.querySelector("#select-payment")
+      
+      select_payment.addEventListener('change',()=>{
+         let option_select = select_payment.value
+        // console.log(option_select)
+        //  <-- testar o valor que está no options pelo console
+        allcardpay.style.translate = (-20 * option_select) + 'em'
+    })
+
 
     </script>
 </body>
