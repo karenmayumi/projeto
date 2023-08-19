@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    /* border: 1px solid #00a2ff63; */
+    border: 1px solid #00a2ff63; 
 }
 body{
     background-color: #ceced4;
@@ -163,12 +163,20 @@ main{
     width: 200px;
     height: 335px;
     aspect-ratio: 4 / 7;
-    box-shadow: inset 0px 0px 90px #c7caf1, 0px 0px 10px #683347;
+    box-shadow: inset 0px 0px 90px #9598c994, 0px 0px 10px #683347a6;
     background-color: #f7f7f7;
     border-radius: 10px;
     overflow:hidden;
     cursor: default;
+    transition: .5s;
   }
+  .card-item:hover{
+    box-shadow: inset 0px 0px 90px #7076c4ab, 0px 0px 10px #683347;
+  }
+  .card-item:hover .card-mais{
+    color: #e9eef8;
+  }
+
   .ci-promocao{
     position: absolute;
     z-index: 1;
@@ -193,6 +201,8 @@ main{
     width: 100%;
     aspect-ratio: 4 / 3;
     transform: scale(1.1);
+    user-select: none;
+    -webkit-user-drag: none;
   }
   .ci-desc{
     height:190px;
@@ -249,10 +259,45 @@ main{
     transition: 0.2s;
   }
 
+    /* ///////////////////////////////////////////
+//////////////// ADD ITEM ON CART /////////////////
+/////////////////////////////////////////// */
+
+#qnt-items{
+  padding: 0 0 0 1em;
+}
+.value::before{
+  content: 'R$ ';
+}
+#area-choise-item{
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row: 2;
+  position: relative;
+  background-color: #f1b47b;
+  padding: 2em;
+  border-radius: 1em;
+  display: flex;
+}
+#area-choise-item h6{
+  position: absolute;
+  top: 20px;
+}
+.costunit::after{
+  content: '(unidade)';
+}
+.valuetotal{
+  background-color: #caf4fa;
+  padding: .2rem .5rem;
+}
+
   /* ///////////////////////////////////////////
 //////////////// Main Content /////////////////
 /////////////////////////////////////////// */
 
+  main{
+    padding: 2em 0;
+  }
   #main-content{
     display: flex;
     padding: 15px;
@@ -263,7 +308,7 @@ main{
 ///////////////////////////////////////// */
 
   aside{
-    width: 20%;
+    width: 17.5em;
     margin: 10px;
     background-color: #66a1b8;
     border-radius: 10px;
@@ -276,7 +321,7 @@ main{
   }
   #explanation-area{
     width: min-content;
-    padding: 5px;
+    padding: 1em;
     text-align: center;
     color: #fff;
   }
@@ -284,7 +329,7 @@ main{
     width: 200px;
     transform: scaleX(-1);
     position: sticky;
-    top: 40%;
+    top: calc(100% - 200px);
   }
 
   /* /////////////////////////////////////////
