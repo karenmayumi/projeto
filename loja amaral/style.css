@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    border: 1px solid #00a2ff63; 
+    /* border: 1px solid #00a2ff63;  */
 }
 body{
     background-color: #ceced4;
@@ -247,6 +247,7 @@ main{
   .cm-seta{
     transform: rotate(90deg);
     margin-left: 5px;
+    transition: .3s;
   }
   .card-mais:hover{
     transition: 0.5s;
@@ -257,6 +258,10 @@ main{
     background-color: #66b88b;
     color: #f2f2f8;
     transition: 0.2s;
+  }
+  .card-mais:focus .cm-seta{
+    transform: rotate(-90deg);
+    transition: .3s;
   }
 
     /* ///////////////////////////////////////////
