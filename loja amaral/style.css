@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    /* border: 1px solid #00a2ff63;  */
+     border: 1px solid #00a2ff63;  
 }
 body{
     background-color: #ceced4;
@@ -282,11 +282,35 @@ main{
   background-color: #f1b47b;
   padding: 2em;
   border-radius: 1em;
-  display: flex;
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: fit-content;
+}
+.x{
+  color: #a1d8e0;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: .3em;
+  padding: 0 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: .25s;
+}
+.x:hover{
+  color: #eaf6ff;
+  transition: .3s;
 }
 #area-choise-item h6{
   position: absolute;
-  top: 20px;
+  top: 1em;
+}
+#area-choise-item section{
+  height:100%;
+  width: 320px;
 }
 .costunit::after{
   content: '(unidade)';
@@ -295,7 +319,17 @@ main{
   background-color: #caf4fa;
   padding: .2rem .5rem;
 }
-
+.stockproduct::before{
+  content: 'Estoque: ';
+}
+.info-area, .option-area{
+  display: flex;
+  flex-direction: column;
+  padding: .5em 2em;
+}
+.option-area button{
+  padding: .5em 2em;
+}
   /* ///////////////////////////////////////////
 //////////////// Main Content /////////////////
 /////////////////////////////////////////// */

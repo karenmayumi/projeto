@@ -419,18 +419,19 @@
                 <!-- ===== Adicionar produto ===== -->
                 <article id="area-choise-item">
                     <h6>Escolha as opções a seguir para adicionar o produto no carrinho...</h6>
-                    <section class="infoarea">
-                        <span class="nameproduct">=nome do produto=</span>
+                    <section class="info-area">
+                        <h2 class="nameproduct">=nome do produto=</h2>
                         <span class="costunit value">#,##</span>
+                        <span class="stockproduct">100</span>
                     </section>
-                    <div class="option-area">
+                    <section class="option-area">
                         <label for="Quantidade-items">Quantidade</label>
                         <input type="number" name="qnt items" id="qnt-items" value="1" min="1" max="100">
                         <label for="Valor-item">Valor total:</label>
                         <span class="valuetotal value">#,##</span>
                         <button type="submit">Adicionar</button>
-                    </div>
-
+                    </section>
+                    <div class="x">x</div>
                 </article>
 
             </section>
@@ -529,30 +530,38 @@
 
         // card de choises //
 
-        var name_product = document.querySelector('.nameproduct')
-        var cost_unit = document.querySelector('.costunit')
+        //por esses enviamos os valores com o innerText para a areachoise
+        const obj_name_product = document.querySelector('.nameproduct')
+        const obj_cost_unit = document.querySelector('.costunit')
+        const areachoise = document.querySelector('#area-choise-item')
 
-
+        //variaveis que recebemos dos cards ps: elas não tem valores porque são recebidas quando o usuário escolhe qual, ai o valor atualiza. ps2: foram criadas foras do escopo para não dar pau depois
         var prod_choise = '';
         var name_choise = '';
         var price_choise = '';
-        const btns_add_card = document.querySelectorAll(".card-mais").forEach(option =>{
+
+        const btns_add_card = document.querySelectorAll(".card-mais")
+
+        btns_add_card.forEach(option =>{
             option.addEventListener('click', function(){
             prod_choise = this.value;
-            console.log(prod_choise)
 
                 // Pegar valores //
                 name_choise = document.querySelector(`.cititle${prod_choise}`).innerHTML.trim()
                 price_choise = document.querySelector(`.ciprice${prod_choise}`).innerHTML.trim()
 
                 console.log(`nome: ${name_choise}   preço:${price_choise}`) //teste
-                name_product.innerHTML = name_choise
-                cost_unit.innerHTML = price_choise
 
+                //inserir valores
+                obj_name_product.innerHTML = name_choise
+                obj_cost_unit.innerHTML = price_choise
+                areachoise.style.display = "flex"
+            })
+        })
+        const btn_closearea = document.querySelector('.x').addEventListener('click', ()=>{
+            areachoise.style.display = 'none'
         })
         
-
-    })
         
 
 
@@ -568,8 +577,7 @@
       
       select_payment.addEventListener('change',()=>{
          let option_select = select_payment.value
-        // console.log(option_select)
-        //  <-- testar o valor que está no options pelo console
+        // console.log(option_select) <-- testar o valor que está no options pelo console
         allcardpay.style.translate = (-20 * option_select) + 'em'
     })
 
