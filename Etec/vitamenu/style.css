@@ -18,6 +18,8 @@
     --section3bg: #528ccf;
     --section4bg: #6688ad;
     --section5bg: #542c9e;
+
+    --titulos: 50px;
 }
 
 html{
@@ -100,9 +102,13 @@ section{
     margin-inline: auto;
     padding: 3rem 0;
 }
-
+section h1{
+    text-align: center;
+    padding: 1rem 0;
+    font-size: var(--titulos);
+}
 section img{
-    width: 100%;
+    width: 50%;
 }
 /* each section */
 .divisao{
