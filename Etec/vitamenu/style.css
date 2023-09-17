@@ -4,12 +4,22 @@
     padding: 0; 
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    /* border: 1px solid #74b472bd;  */
 }
 :root{
     --header-color: #a3c5e4;
     --footer-color: #9fb3c5;
-    --main-color: #7c85bd;
+    --main-color: #2c619e;
+
+    --depcard-color: #c6ace4;
+
+    --section1bg: #2c619e;
+    --section2bg: #8565be;
+    --section3bg: #528ccf;
+    --section4bg: #6688ad;
+    --section5bg: #542c9e;
 }
+
 html{
     scroll-behavior: smooth;
 }
@@ -21,17 +31,24 @@ html{
 }
 
 /* unitárias */
+#header{
+    pointer-events: none;
+    padding: 1em;
+}
+#header img{
+    display: block;
+}
 nav{
     padding: 10px 0;
     position: sticky;
     top: 0;
     background-color: aliceblue;
-    box-shadow: 0 5px 10px 0 #0e2a44;
+    box-shadow: 0 0 15px #0e2a44;
     z-index: 1;
 }
 nav ul{
     list-style: none;
-    gap: 2em;
+    gap: 2%;
     color: #0e2a44;
 }
 nav ul li:last-child{
@@ -43,7 +60,7 @@ nav ul li:last-child{
 }
 nav ul li:last-child:hover{
     background-color: #81a2e9;
-    transition: .1s;
+    transition: .2s;
 }
 a{
     text-decoration: none;
@@ -56,22 +73,42 @@ a:hover{
     transition: .4s;
 
 }
-.atual{
+.active{
     color: #126363;
     border-bottom: 2px solid #0a559b;
 }
-section:not([id=depoimentos]){
+.base:nth-child(1){
+    background-color: var(--section1bg);
+}
+.base:nth-child(2){
+    background-color: var(--section2bg);
+}
+.base:nth-child(3){
+    background-color: var(--section3bg);
+}
+.base:nth-child(4){
+    background-color: var(--section4bg);
+}
+.base:nth-child(5){
+    background-color: var(--section5bg);
+}
+/* section:not([id=depoimentos]){
     height: 90vh;
-    padding: 0 clamp(2rem, 10rem, 15em);
+} */
+section{
+    width: min(90%, 70em);
+    margin-inline: auto;
+    padding: 3rem 0;
 }
 
 section img{
-    width: 25vw;
+    width: 100%;
 }
 /* each section */
 .divisao{
     background-image: url(./img/vitamenu-pic1.jpg);
     background-attachment: fixed;
+    background-position: center;
     height: 2rem;
     filter: blur(2px);
     z-index: 0;
@@ -84,7 +121,7 @@ section img{
     display: grid;
     gap: 1.25rem;
 
-    width: min(95%, 70em);
+    width: min(90%, 70em);
     margin-inline: auto;
 }
 @media (min-width:60em){
@@ -103,11 +140,13 @@ section img{
 
 
 .card-dep{
-    background-color: #0a559b;
+    background-color: var(--depcard-color);
     padding: 20px;
     border-radius: 10px;
+    font-size: .75rem;
+    color: #000;
 }
-.card-dep img:not([alt~="cinco_estrelas"]){
+.card-dep img:where([alt~="face"]){
     width: 3.5rem;
     aspect-ratio: 1;
     object-fit: cover;
@@ -120,22 +159,23 @@ section img{
     align-items: center;
 }
 .card-name{
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 .card-stars img{
-    width: 150px;
-    overflow-x: hidden;
+    width: 100px;
+    display: block;
 }
 /* bases */
 header{
     background-color: var(--header-color);
-    height: 100px;
+    height: 75px;
     z-index: 2;
     position: relative;
 }
 main{
     background-color: var(--main-color);
     padding: clamp(10px, 3em, 20vw) 0;
+    color: #fff;
 }
 footer{
     background-color: var(--footer-color);
