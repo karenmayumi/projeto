@@ -27,14 +27,27 @@ nav{
     top: 0;
     background-color: aliceblue;
     box-shadow: 0 5px 10px 0 #0e2a44;
+    z-index: 1;
 }
 nav ul{
     list-style: none;
     gap: 2em;
+    color: #0e2a44;
+}
+nav ul li:last-child{
+    background-color: #2d3e8d;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 15px;
+    transition: .3s;
+}
+nav ul li:last-child:hover{
+    background-color: #81a2e9;
+    transition: .1s;
 }
 a{
     text-decoration: none;
-    color: #0e2a44;
+    color: inherit;
     border-bottom: 2px solid transparent;
     transition: .4s;
 }
@@ -56,11 +69,12 @@ section img{
     width: 25vw;
 }
 /* each section */
-#descricao{
+.divisao{
     background-image: url(./img/vitamenu-pic1.jpg);
     background-attachment: fixed;
-    display: grid;
-
+    height: 2rem;
+    filter: blur(2px);
+    z-index: 0;
 }
 #descricao *{
     color: aliceblue;
