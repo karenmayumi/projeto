@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slideshow.css">
     <title>Vitamenu - Marketing</title>
 </head>
 <body>
@@ -13,8 +14,8 @@
     </header>
     <nav>
         <ul class="center">
-            <li><a href="#header" class="atual">Início</a></li>
-            <li><a href="#desc">Funcionamento</a></li>
+            <li><a href="#header" class="active">Início</a></li>
+            <li><a href="#descricao">Aplicativo</a></li>
             <li><a href="#receitas">Receitas</a></li>
             <li><a href="#depoimentos">Depoimentos</a></li>
             <li><a href="#planos">Plano</a></li>
@@ -25,17 +26,43 @@
         <article class="base">
             <section id="base">
                 <h1>Nós</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deleniti dolor laudantium officiis nihil laborum nesciunt eaque accusantium, velit ut voluptate, quos maiores!</p>
+                <p>Nossa equipe é formada por Karen,Luisa e Luane. Esse site apresenta nossa proposta de publicidade de um incrível aplicativo, o Vitamenu, uma solução completa de saúde e fitness que tem como objetivo melhorar a qualidade de vida das pessoas. Criamos essa campanha que destaca os principais recursos do Vitamenu e enfatiza como ele pode ser um parceiro essencial na busca por uma vida mais saudável.</p>
             </section>
         </article>
 
         <article class="base">
             <section id="descricao">
                 <h1>Dentro do aplicativo</h1>
-                <h2>Funcionamento</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deleniti dolor laudantium officiis nihil laborum nesciunt eaque accusantium, velit ut voluptate, quos maiores!</p>
-                <h2>Vantagens</h2>
-                <img src="./img/vitamenu-pic1.jpg" alt="Vitamenu azul">
+                <div class="funcionamento">
+                    <div class="text">
+                        <h2>Funcionamento</h2>
+                        <p>Vitamenu é um aplicativo inovador projetado para tornar mais simples e eficaz o alcance dos seus objetivos de saúde e fitness. Aqui está como funciona:</p>
+
+                        <p>Comece criando seu próprio perfil no aplicativo, onde você pode escolher entre emagrecer, ganhar massa muscular, hipertrofiar ou manter o seu peso atual. Este perfil personalizado é a base de toda a sua jornada.</p>
+                           
+                        <p>Além disso, O Vitamenu permite que você registre todos os alimentos que consome e os exercícios físicos que realiza. Isso ajuda a manter o controle de suas calorias consumidas e queimadas, permitindo planejar suas refeições de acordo com suas preferências pessoais.</p>
+                           
+                        <p>Diariamente você receberá dicas personalizadas com base nas informações que você fornece. Se houver erros em sua dieta, o Vitamenu irá identificá-los e oferecer sugestões para melhorar seus hábitos alimentares.</p>
+                    </div>
+                    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+                        <swiper-slide>Slide 1</swiper-slide>
+                        <swiper-slide>Slide 2</swiper-slide>
+                        <swiper-slide>Slide 3</swiper-slide>
+                        <div class="autoplay-progress" slot="container-end">
+                        <svg viewBox="0 0 48 48">
+                            <circle cx="24" cy="24" r="20"></circle>
+                        </svg>
+                        <span></span>
+                        </div>
+                    </swiper-container>
+                </div>
+                <div class="vantagens">
+                    <img src="./img/vitamenu-pic1.jpg" alt="Vitamenu azul">
+                    <div class="text">
+                        <h2>Vantagens</h2>
+                        <p>O Vitamenu é um aplicativo abrangente que oferece uma série de recursos para ajudar você a alcançar seus objetivos de saúde e fitness. Ele inclui sugestões de cardápios para todas as refeições, um amplo banco de dados de alimentos, informações nutricionais detalhadas, um contador de macros e calorias, lembretes para beber água e manter horários regulares de refeições, dados sobre a queima de calorias em exercícios, acompanhamento das suas medidas corporais e um contador de água para garantir que você permaneça hidratado. Além disso, o aplicativo promove uma abordagem equilibrada e flexível para a dieta, permitindo que você saiba o que é ideal em termos de carboidratos, proteínas, cálcio, ferro e outros nutrientes. Com o Vitamenu, você pode gerenciar sua saúde de forma eficaz e personalizada.</p>
+                    </div>
+                </div>
             </section>
         </article>
 
@@ -44,8 +71,29 @@
         <article class="base">
             <section id="receitas">
                 <h1>Receitas</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deleniti dolor laudantium officiis nihil laborum nesciunt eaque accusantium, velit ut voluptate, quos maiores!</p>
-                <img src="./img/vitamenu-pic1.jpg" alt="Vitamenu azul">
+                <div class="cards-receitas">
+                    <div class="card-rec">
+                        <img src="./img/img-rec1.jpeg" alt="receita 1" class="img-rec">
+                        <p>Ingredientes:
+                            1 mamão papaia médio picado, 1 colher de sopa de suco de limão, 1 colher de chá de adoçante, 1 colher de gengibre ralado, Meio quilo de peixe magro, 1 abacate médio cortado em pequenas fatias, 2 colheres de sopa de vinho branco.⠀⠀⠀⠀⠀⠀⠀
+                            Modo de preparo:
+                            Pegue todos os ingredientes do molho e bata-os num liquidificador até alisar; Coloque o molho um recipiente e cozinhe durante 3 a 4 minutos em potencia alta; Cubra o resultado para mantê-lo aquecido e reserve-o; Feito isso, coloque todos os filés de peixe numa tigela e passe o molho inglês em ambos os lados;
+                            Cozinhe durante 6 a 8 minutos em potencia média-alta ou até o peixe ficar cozido; Tampe a panela e deixe os peixes descansarem por 3 minutos. Divida todo o molho entre eles; Por fim, decore com o restante do abacate e com ervas a gosto.</p>
+                    </div>
+                    <div class="card-rec">
+                        <img src="./img/img-rec2.jpeg" alt="receita 2" class="img-rec">
+                        <p>Nessa receita você só precisa dispor os alimentos em camadas dentro de um pote, como na imagem!
+                            👉 Camada 1: temperos ao seu gosto, tais como azeite, limão, sal, vinagre, ervas, especiarias etc;
+                            👉 Camada 2: leguminosas e vegetais que podem entrar em contato com os temperos, tais como tomate-cereja, grão de bico, lentilha, quinoa, milho, ervilha etc;
+                            👉 Camada 3: vegetais que não podem entrar em contato com os temperos, tais como pepino, cenoura, tomate picado, beterraba, rabanete, palmito etc
+                            👉 Camada 4: folhas como alface, rúcula, escarola, agrião, repolho etc;
+                            👉 Camada 5: grãos e sementes, tais como linhaça, chia, nozes, castanhas etc.</p>
+                    </div>
+                    <div class="card-rec">
+                        <img src="./img/img-rec3.jpeg" alt="receita 3" class="img-rec">
+                        <p>Prepare uma deliciosa sobremesa de chia com manga. Misture sementes de chia, leite de coco, coco ralado, extrato de baunilha e melado em uma tigela. Deixe descansar por 30 minutos à temperatura ambiente e depois por mais 3 horas na geladeira. Monte camadas dessa mistura com cubos de manga em copos ou tigelas individuais e polvilhe coco ralado por cima. Aproveite esta sobremesa refrescante e saudável.</p>
+                    </div>
+                </div>
             </section>
         </article>
 
@@ -120,5 +168,8 @@
         <p>© 2023 Luane Vitória, Luísa Sanches e Karen Mayumi Rosa, all rights reserved</p>
     </footer>
     <script src="./navbar-interaction.js"></script>
+    <script src="./slideshow.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 </body>
 </html>
