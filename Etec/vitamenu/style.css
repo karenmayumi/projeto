@@ -4,7 +4,7 @@
     padding: 0; 
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /* border: 1px solid #74b472bd;   */
+    /* border: 1px solid #74b472bd;    */
 }
 :root{
     --header-color: #a3c5e4;
@@ -34,23 +34,12 @@ html{
 
 /* unitárias */
 #header{
-    pointer-events: none;
     padding: 1em;
     z-index: 3;
 }
 #header img{
     display: block;
 }
-/* body::before{
-    content: '';
-    position: fixed;
-    top: 0;
-    z-index: 5;
-    background-color: #ff00007e;
-    width: 100vw;
-    height: 20vh;
-    pointer-events: none;
-} */
 nav{
     padding: 10px 0;
     position: sticky;
@@ -82,13 +71,13 @@ nav ul li:last-child:hover{
     background-color: #81a2e9;
     transition: .2s;
 }
-a{
+nav a{
     text-decoration: none;
     color: inherit;
     border-bottom: 2px solid transparent;
     transition: .4s;
 }
-a:hover{
+nav a:hover{
     border-bottom: 2px solid #126363;
     transition: .4s;
 
@@ -125,23 +114,7 @@ section h1{
     padding: 1rem 0;
     font-size: var(--titulos);
 }
-section img{
-    width: 50%;
-}
 /* each section */
-.base:first-child{
-    background-image: url(./img/banner-blue.jpg);
-    background-position: center;
-    background-size: 100vw;
-}
-.divisao{
-    background-image: url(./img/vitamenu-pic1.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    height: 2rem;
-    filter: blur(2px);
-    z-index: 0;
-}
 #descricao{
     color: aliceblue;
 }
@@ -152,26 +125,32 @@ section img{
 .text:nth-child(1){
     text-align: end;
 }
-.text{
+#descricao .text{
     flex-direction: column;
     gap: 1em;
     padding: 20px;
 }
 #descricao img{
     object-fit: cover;
+    height: 250px;
+    aspect-ratio: 4 / 3;
 
 }
 /* --receitas-- */
 .cards-receitas{
     display: grid;
-    gap: 2em;
+    gap: 10em;
     grid-template-columns: repeat(3, 1fr);
+    padding: 0 2em;
 }
 .card-rec{
     background-color: var(--header-color);
     border-radius: 10px;
-    padding: 1.5em;
-}
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 0 #4d1d83;
+}img
 .card-rec p{
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -180,8 +159,20 @@ section img{
 
     transition: .5s;
 }
-.card-rec:nth-child(1):hover .card-rec:not(:nth-child(1)){
-    display: none;
+.card-rec h3{
+    line-height: 1.2;
+    color: #ffffff;
+}
+.card-rec img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+.card-rec .text{
+    padding: 5px 15px;
+    line-height: 1.5;
+    color: #0e2a44;
 }
 
 
@@ -204,6 +195,9 @@ section img{
     .card-dep:last-child{
         grid-column-start: 4;
         grid-row: 1 / span 2;
+    }
+    .plano-content{
+        display: block;
     }
 }
 .card-dep{
@@ -231,7 +225,62 @@ section img{
     width: 100px;
     display: block;
 }
+/* --educamente ctrlcctrlv-- */
+.card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #77dcee80;
+    text-align: center;
+    background-color: #212455;
+}
 
+.title {
+    font-size: 24px;
+    color: #94eaff;
+}
+
+.benefits {
+    list-style-type: none;
+    padding: 0;
+}
+
+.benefits li {
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .4s;
+}
+.buy-button:hover{
+    background-color: #0161c7;
+    transition: .4s;
+}
+.plano-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+.plano-content img{
+    width: 30vw;
+}
+.ebook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 /* bases */
 header{
     background-color: var(--header-color);
@@ -241,10 +290,16 @@ header{
 }
 main{
     background-color: var(--main-color);
-    padding: clamp(10px, 3em, 20vw) 0;
     color: #fff;
 }
 footer{
     background-color: var(--footer-color);
     height: 10rem;
 }
+/* 
+__Coisas que eu melhoraria se tivesse mais tempo:__
+-responsavidade do site todo; (só tem em depoimentos)
+-adicionar sombra nos card de depoimento;
+-melhorar a disposição do texto da sessão "nós" e da "sessão dentro do aplicativo";
+-colocar mais receitas com swiper;
+ */
