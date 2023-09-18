@@ -180,13 +180,8 @@ section img{
 
     transition: .5s;
 }
-.card-rec:hover p{
-    -webkit-line-clamp: 100;
-    transition: .5s;
-}
-.card-rec:nth-child(1):hover{
-    background-color: #000;
-
+.card-rec:nth-child(1):hover .card-rec:not(:nth-child(1)){
+    display: none;
 }
 
 
