@@ -166,8 +166,6 @@ section h1{
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-
-    transition: .5s;
 }
 .card-rec h3{
     line-height: 1.2;
@@ -183,20 +181,29 @@ section h1{
     padding: 15px 15px 40px;
     line-height: 1.5;
     color: #0e2a44;
-    & a{
-        position: absolute;
-        bottom: 15px;
-        right: 15px;
-    }
 }
 .btn-receita:hover .card-rec{
     box-shadow: 5px 5px 20px 0 #4d1d83;
+    background-color: #000;
 }
 .btn-receita{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
     text-decoration: none;
-    color: #528ccf;
+    color: #2079df;
+    padding: .1em .75em;
+    background-color: #cbddff;
+    /* border-radius: 10px 10px 0; */
+    border-radius: 10px 0 10px;
+    transition: .4s;
 }
-
+.btn-receita:hover{
+    color: #fff;
+    background-color: #506099;
+    border-radius: 10px;
+    transition: .3s;
+}
 /* --depoimento-- */
 .depoimento-grid{
     display: grid;
