@@ -142,7 +142,7 @@ section h1{
 /* --receitas-- */
 .cards-receitas{
     display: grid;
-    gap: 10em;
+    gap: 5em;
     grid-template-columns: repeat(3, 1fr);
     padding: 0 2em;
 }
@@ -152,8 +152,15 @@ section h1{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 5px 5px 20px 0 #4d1d83;
-}img
+    box-shadow: 5px 5px 20px 0 #1d2783;
+    transition: .5s;
+    cursor: default;
+}
+.card-rec:hover{
+    transform: translateX(-20px) translateY(-20px);
+    transition: .3s;
+}
+
 .card-rec p{
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -173,11 +180,22 @@ section h1{
     display: block;
 }
 .card-rec .text{
-    padding: 5px 15px;
+    padding: 15px 15px 40px;
     line-height: 1.5;
     color: #0e2a44;
+    & a{
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
 }
-
+.btn-receita:hover .card-rec{
+    box-shadow: 5px 5px 20px 0 #4d1d83;
+}
+.btn-receita{
+    text-decoration: none;
+    color: #528ccf;
+}
 
 /* --depoimento-- */
 .depoimento-grid{
@@ -202,6 +220,15 @@ section h1{
     .plano-content{
         display: block;
     }
+
+    
+}
+@media (max-width:60em){
+    .cards-receitas{
+        grid-template-columns: 1fr;
+        padding: 0 10em;
+            
+        }
 }
 .card-dep{
     background-color: var(--depcard-color);
