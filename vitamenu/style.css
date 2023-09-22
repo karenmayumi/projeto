@@ -362,11 +362,13 @@ main{
 footer{
     background-color: var(--footer-color);
     height: 10rem;
+    padding: 0 20px;
+    text-align: center;
 }
 /* 
 __Coisas que eu melhoraria se tivesse mais tempo:__
--responsavidade do site todo; (só tem em depoimentos)
--adicionar sombra nos card de depoimento;
--melhorar a disposição do texto da sessão "nós" e da "sessão dentro do aplicativo";
+-V responsavidade do site todo; (só tem em depoimentos)
+-V adicionar sombra nos card de depoimento;
+-V melhorar a disposição do texto da sessão "nós" e da "sessão dentro do aplicativo";
 -colocar mais receitas com swiper;
  */

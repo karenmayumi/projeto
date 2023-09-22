@@ -1,9 +1,9 @@
 var navitem = document.querySelectorAll('nav ul li a');
         var sections = document.querySelectorAll('article');
 
-        var quinzevh = window.pageYOffset * 0.01 * 20;
+        var quinzevh = window.pageYOffset * 0.01 * 10;
         window.addEventListener('resize', function() {
-            quinzevh = window.pageYOffset * 0.01 * 20;
+            quinzevh = window.pageYOffset * 0.01 * 10;
         });
         window.onscroll = function() {
             var scrollPos = (window.pageYOffset || document.documentElement.scrollTop) + quinzevh;
