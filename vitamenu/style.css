@@ -4,7 +4,7 @@
     padding: 0; 
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /* border: 1px solid #74b472bd;    */
+    border: 1px solid #74b472bd;   
 }
 :root{
     --header-color: #a3c5e4;
@@ -135,22 +135,48 @@ section h1{
 }
 .vantagens img{
     object-fit: cover;
-    height: 250px;
-    aspect-ratio: 4 / 3;
+    width: 200px;
+    aspect-ratio: 9 / 16;
 
 }
 /* --receitas-- */
+@media (max-width:60em){
+    .cards-receitas{
+        flex-wrap: wrap;
+        gap: 0em; 
+        }
+    .card-rec img{
+        width: 150px;
+    }
+    /* -- */
+    .funcionamento{
+        flex-direction: column;
+    }
+    #descricao .text{
+        width: 100%;
+    }
+    .vantagens{
+        flex-direction: column-reverse;
+    }
+    .plano-content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .cards-receitas{
-    display: grid;
+    width: 100%;
+    display: flex;
     gap: 5em;
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    /* grid-template-columns: repeat(3, 1fr); */
     padding: 0 2em;
+
 }
 .card-rec{
+    width: min-content;
     background-color: var(--header-color);
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
     border-radius: 10px;
     box-shadow: 5px 5px 20px 0 #1d2783;
     transition: .5s;
@@ -159,8 +185,16 @@ section h1{
 .card-rec:hover{
     transform: translateX(-20px) translateY(-20px);
     transition: .3s;
+    box-shadow: 5px 5px 20px 0 #c59df1;
 }
-
+.card-rec::after{
+    content: '';
+    width: 120%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    left: -10%;
+}
 .card-rec p{
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -172,7 +206,7 @@ section h1{
     color: #ffffff;
 }
 .card-rec img{
-    width: 100%;
+    width: 300px;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     display: block;
@@ -224,23 +258,7 @@ section h1{
         grid-column-start: 4;
         grid-row: 1 / span 2;
     }
-    .plano-content{
-        display: block;
-    }
-<<<<<<< Updated upstream
-
     
-}
-@media (max-width:60em){
-    .cards-receitas{
-        grid-template-columns: 1fr;
-        padding: 0 10em;
-            
-        }
-=======
-    /* -- */
-    
->>>>>>> Stashed changes
 }
 .card-dep{
     background-color: var(--depcard-color);
@@ -322,6 +340,9 @@ section h1{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.ebook h2{
+    text-align: center;
 }
 /* bases */
 header{
