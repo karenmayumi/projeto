@@ -227,6 +227,7 @@ section h1{
     .plano-content{
         display: block;
     }
+<<<<<<< Updated upstream
 
     
 }
@@ -236,6 +237,10 @@ section h1{
         padding: 0 10em;
             
         }
+=======
+    /* -- */
+    
+>>>>>>> Stashed changes
 }
 .card-dep{
     background-color: var(--depcard-color);
