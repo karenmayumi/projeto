@@ -26,10 +26,10 @@ function verificar(num,tentativa,total_tents,caixa_tent,alerta){
   }
   else{
     if(tentativa > num){
-      alerta.textContent = "O número inserido é MAIOR que o aleatório!"
+      alerta.textContent = "O número aleatório é MENOR que o inserido!"
     }
     else{
-      alerta.textContent = "O número inserido é MENOR que o aleatório!"
+      alerta.textContent = "O número aleatório é MAIOR que o inserido!"
       }
       return false
     }
@@ -46,6 +46,6 @@ body.addEventListener("keydown",(event)=>{
     total_tents = 0
     caixa_tent.textContent = total_tents
     .aviso.textContent = ''
-    caixa_tent
+    caixa_tent.textContent = ''
   }
 })
