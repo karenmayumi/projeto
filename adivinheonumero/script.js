@@ -43,9 +43,8 @@ body.addEventListener("keydown",(event)=>{
   }
   if(event.key == "r"){
     num = Math.floor(Math.random()*100)
+    console.log(num)
     total_tents = 0
     caixa_tent.textContent = total_tents
-    .aviso.textContent = ''
-    caixa_tent.textContent = ''
   }
 })
