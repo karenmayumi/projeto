@@ -1,14 +1,12 @@
 
-let arrayk = ['#1883CD','#72B0DB','#728ADB','#1883CD']
-var color = 0
-var quad = document.querySelector('.q')
-setInterval(()=>{
-  if (color == 4){
-    color=0
-  }
-  quad.style.backgroundColor = arrayk[color]
-  color++
-},500)
+
+const quad = document.querySelector('.q')
+
+const feliz = document.querySelector('.happy')
+const angry = document.querySelector('.angry')
+
+
+
 
 var num = Math.floor(Math.random()*100)
 console.log(num)
@@ -22,6 +20,12 @@ function verificar(num,tentativa,total_tents,caixa_tent,alerta){
   tentativa = document.querySelector("input").value
   if(tentativa == num){
     alerta.textContent = "O número inserido é o aleatório!"
+
+    feliz.classList.add('visivel')
+    setInterval(()=>{
+      feliz.classList.remove('visivel')
+    },3000)
+
     return true
   }
   else{
@@ -31,6 +35,10 @@ function verificar(num,tentativa,total_tents,caixa_tent,alerta){
     else{
       alerta.textContent = "O número aleatório é MAIOR que o inserido!"
       }
+      angry.classList.add('visivel')
+    setInterval(()=>{
+      angry.classList.remove('visivel')
+    },3000)
       return false
     }
 }
@@ -48,3 +56,4 @@ body.addEventListener("keydown",(event)=>{
     caixa_tent.textContent = total_tents
   }
 })
+
