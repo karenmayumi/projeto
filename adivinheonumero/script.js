@@ -2,7 +2,7 @@
 
 const quad = document.querySelector('.q')
 
-const feliz = document.querySelector('.happy')
+const happy = document.querySelector('.happy')
 const angry = document.querySelector('.angry')
 
 
@@ -21,9 +21,9 @@ function verificar(num,tentativa,total_tents,caixa_tent,alerta){
   if(tentativa == num){
     alerta.textContent = "O número inserido é o aleatório!"
 
-    feliz.classList.add('visivel')
+    happy.classList.add('visivel')
     setInterval(()=>{
-      feliz.classList.remove('visivel')
+      happy.classList.remove('visivel')
     },3000)
 
     return true
@@ -35,10 +35,12 @@ function verificar(num,tentativa,total_tents,caixa_tent,alerta){
     else{
       alerta.textContent = "O número aleatório é MAIOR que o inserido!"
       }
-      angry.classList.add('visivel')
+
+    angry.classList.add('visivel')
     setInterval(()=>{
       angry.classList.remove('visivel')
     },3000)
+
       return false
     }
 }
