@@ -20,11 +20,12 @@ function verificar(num,tentativa,total_tents,caixa_tent,alerta){
   tentativa = document.querySelector("input").value
   if(tentativa == num){
     alerta.textContent = "O número inserido é o aleatório!"
+    
 
     happy.classList.add('visivel')
-    setInterval(()=>{
-      happy.classList.remove('visivel')
-    },3000)
+        setTimeout(()=>{
+          happy.classList.remove('visivel')
+        },750)
 
     return true
   }
@@ -36,13 +37,14 @@ function verificar(num,tentativa,total_tents,caixa_tent,alerta){
       alerta.textContent = "O número aleatório é MAIOR que o inserido!"
       }
 
-    angry.classList.add('visivel')
-    setInterval(()=>{
-      angry.classList.remove('visivel')
-    },3000)
-
-      return false
-    }
+        angry.classList.add('visivel')
+        console.log("botou angry")
+        setTimeout(()=>{
+          angry.classList.remove('visivel')
+          console.log("tirou angry")
+        },750)
+        return false
+      }   
 }
 body.addEventListener("keydown",(event)=>{
   if(event.key == "Enter"){
