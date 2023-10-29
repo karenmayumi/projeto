@@ -6,17 +6,20 @@ const game = {
   tentativaInp : parseInt(document.querySelector("input").value),
   allTrysOut : document.querySelector(".caixa_tent"),
   body : document.querySelector("body"),
-  allTrysjs : total_tents = 0
+  allTrysjs : total_tents = 0,
+  mensage : document.querySelector(".mensage")
 }
 
 // ligação com as imagens
 const steve = {
   perso : document.querySelector(".steve .perso"),
-  hearts : document.querySelector(".steve .heart")
+  heart : document.querySelector(".steve .heart"),
+  hearts: 5
 }
 const skel = {
   perso : document.querySelector(".skeleton .perso"),
-  hearts : document.querySelector(".skeleton .heart")
+  heart : document.querySelector(".skeleton .heart"),
+  hearts: 1
 }
 
 
@@ -38,18 +41,81 @@ function verificar(aleatorio){
 
 function atack_skel(){
   // comandos
-  skel.perso.url = './img/game/skel-a-1'
+  steve.hearts --
+  setTimeout(()=>{
+    skel.perso.src = './img/game/skel-a-1.png'
+    steve.perso.src = './img/game/steve-d-2.png'
+
+  },500)
+
+  skel.perso.src = './img/game/skel-base.png'
+  steve.perso.src = './img/game/steve-d-1.png'
+    switch (steve.hearts){
+      case 5:
+        steve.heart.src = './img/game/fiveheart.gif'
+        break
+      case 4:
+        steve.heart.src = './img/game/fourheart.gif'
+        break
+      case 3:
+        steve.heart.src = './img/game/threeheart.gif'
+        break
+      case 2:
+        steve.heart.src = './img/game/twoheart.gif'
+        break
+      case 1:
+        steve.heart.src = './img/game/oneheart.gif'
+        break
+      case 0:
+        game.mensage.textContent = 'Você Perdeu!'
+        break
+      case _:
+        console.log("Erro! valor de coração inválido!")
+    }
+
+  setTimeout(()=>{
+    skel.perso.src = './img/game/skel-base.png'
+    steve.perso.src = './img/game/steve-base.png'
+    
+  },1000)
+
+
 }
 function atack_steve(){
   // comandos
+  
+  skel.hearts --
+  setTimeout(()=>{
+    steve.perso.src = './img/game/steve-a-1.png'
+    steve.perso.style.transform = 'translateX(-30%) rotate(10deg);'
+  },500)
+
+  setTimeout(()=>{
+    steve.perso.style.transform = 'translateX(-60%) rotate(-40deg);'
+    switch (skel.hearts){
+      case 1:
+        steve.heart.src = './img/game/oneheart.gif'
+      case 0:
+        game.mensage.textContent = 'Você Ganhou!'
+      case _:
+        console.log("Erro! valor de coração inválido!")
+    }
+  },500)
+
+    skel.perso.src = './img/game/skel-base.png'
+    steve.perso.src = './img/game/steve-base.png'
+
 }
 
 game.body.addEventListener("keydown",(event)=>{
   if(event.key == "Enter"){
     if (verificar(aleatorio) == false){
-
+      atack_skel()
       // codigo da animacao do steve
 
+    }
+    else{
+      atack_steve()
     }
   }
 
@@ -64,4 +130,3 @@ game.body.addEventListener("keydown",(event)=>{
 
   }
 })
-

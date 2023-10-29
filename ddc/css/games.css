@@ -11,6 +11,7 @@ html{
 }
 body{
     background-color: #050114;
+    overflow-x: hidden;
   }
 main,
 footer,
@@ -23,7 +24,6 @@ article{
     color: #fff;
     background-position: center;
     background-size: 100vw;
-    width: 100vw;
 
 }
 article > div{
@@ -32,6 +32,7 @@ article > div{
 #games{
     background-image: url(../img/bgpicture.png);
     height: 100vh;
+    width: 100vw;
 }
 footer{
     background-image: url(../img/skynight.png);
@@ -48,9 +49,8 @@ footer{
 }
 /* game */
 #games-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    place-content: center;
 }
 #game{
     background-image: linear-gradient(90deg, #221541, #142e46);
@@ -93,4 +93,9 @@ footer{
 
 .interation input{
     width: 50%;
+}
+.mensage{
+    position: absolute;
+    top: 2%;
+    right: 2%;
 }

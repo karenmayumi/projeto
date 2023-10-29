@@ -16,6 +16,7 @@
           inset .2rem .2rem 0 #fff;
           overflow: hidden;
     transition: 1s;
+    z-index: 3;
 }
 #menu nav{
     transition: 1s;
