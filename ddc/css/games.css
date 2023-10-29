@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    border: 1px red solid;
+    /* border: 1px red solid; */
 }
 html{
     scroll-behavior: smooth;
@@ -54,10 +54,12 @@ footer{
 }
 #game{
     background-image: linear-gradient(90deg, #221541, #142e46);
-    height: 25rem;
+    height: 35rem;
     width: 50rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .steve,
 .skeleton{
@@ -80,4 +82,15 @@ footer{
     width: 300px;
     height: 250px;
     object-fit: cover;
+}
+.interation{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 2rem;
+}
+
+.interation input{
+    width: 50%;
 }
