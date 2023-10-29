@@ -36,7 +36,7 @@ main{
 }
 
 #form{
-  background-image: url(/img/bgflorest.png);
+  background-image: url(../img/bgflorest.png);
 }
 #form-content{
   height: fit-content;
@@ -57,7 +57,7 @@ main{
 }
 
 footer{
-  background-image: url(/img/skynight.png);
+  background-image: url(../img/skynight.png);
 
 }
 #footer-content{

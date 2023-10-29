@@ -29,7 +29,7 @@ article > div{
     
 }
 #tips{
-  background-image: url(/img/bgflorest2.jpg);
+  background-image: url(../img/bgflorest2.jpg);
 }
 article{
   background-position: top center;
@@ -113,7 +113,7 @@ h3{
   }
 }
 footer{
-  background-image: url(/img/skynight.png);
+  background-image: url(../img/skynight.png);
 
 }
 #footer-content{

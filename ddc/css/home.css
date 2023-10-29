@@ -32,11 +32,11 @@ article{
 
 }
 #greatings{
-    background-image: url(/img/cerejeira.png);
+    background-image: url(../img/cerejeira.png);
     background-color: #53173f;
 }
 #infos{
-    background-image: url(/img/biom2.jpg);
+    background-image: url(../img/biom2.jpg);
     background-color: #17533c;
 }
 .arrow{
@@ -66,7 +66,7 @@ article{
 }
 
 footer{
-    background-image: url(/img/skynight.png);
+    background-image: url(../img/skynight.png);
   
   }
 #footer-content{

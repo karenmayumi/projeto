@@ -5,12 +5,12 @@ const chest_img = document.querySelector('#menu img')
 var menu_chest = false
 function interaction_menu(){
     if (menu_chest == false){
-        chest_img.src = '/img/chest-open.png'
+        chest_img.src = './img/chest-open.png'
         menu_chest = true
         menu_nav.style.maxHeight = '150px'
 
     }else{
-        chest_img.src = '/img/chest-closed.png'
+        chest_img.src = './img/chest-closed.png'
         menu_chest = false
         menu_nav.style.maxHeight = '0'
 

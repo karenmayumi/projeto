@@ -30,11 +30,11 @@ article > div{
     width: min(95%,70em);
 }
 #games{
-    background-image: url(/img/bgpicture.png);
+    background-image: url(../img/bgpicture.png);
     height: 100vh;
 }
 footer{
-    background-image: url(/img/skynight.png);
+    background-image: url(../img/skynight.png);
   
   }
 #footer-content{
