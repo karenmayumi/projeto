@@ -1,0 +1,80 @@
+/* menu */
+:root{
+    --size-menu-img: 100px;
+}
+#menu{
+    background-color: #5db873;
+    position: fixed;
+    bottom: 2.5vw;
+    right: 5vh;
+    border-radius: 10px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: .2rem .2rem 0 #000,
+          inset .2rem .2rem 0 #fff;
+          overflow: hidden;
+    transition: 1s;
+}
+#menu nav{
+    transition: 1s;
+    max-height: 0;
+    overflow: hidden;
+}
+#menu img:hover{
+    opacity: .75;
+    transition: 300ms;
+}
+
+#menu img{
+    width: var(--size-menu-img);
+    aspect-ratio: 1;
+    bottom: 0;
+    cursor: pointer;
+}
+
+#menu ul{
+    width: var(--size-menu-img);
+    aspect-ratio: 1;
+    padding: 0 15px;
+    transition: 1s;
+    display: inline-block;
+}
+#menu .label{
+    cursor: pointer;
+    padding: .3rem 10px;
+    transition: 1s;
+    width: 100%;
+    text-align: center;
+    background-color: #1513683b;
+}
+#menu .label:hover,
+#menu .label:focus-visible{
+    background-color: #115541de;
+    transition: .4s;
+    margin: 0 .2rem;
+}
+.page-active{
+    text-decoration: underline;
+}
+.menu-item{
+    background-color: #00000010;
+    padding: 1px;
+    width: 100%;
+    transform: .1s;
+    color: #000;
+}
+.menu-item:hover{
+    background-color: #94d6c2;
+    transition: .2s;
+}
+/* listas */
+
+li{
+    list-style-type: none;
+    text-decoration: none;
+}
+a{
+    text-decoration: inherit;
+}

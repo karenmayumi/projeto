@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    /* border: 1px red solid; */
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+  background-color: #050114;
+}
+main,
+footer,
+article{
+    display: flex;
+    justify-content: center;
+}
+article > div{
+    width: min(95%,70em);
+    
+}
+article{
+  background-position: top center;
+  background-size: 100vw;
+  width: 100vw;
+  padding: 2rem 0 4.5rem;
+
+}
+main{
+    --bg-color: #eba3a3;
+
+}
+
+#form{
+  background-image: url(/img/bgflorest.png);
+}
+#form-content{
+  height: fit-content;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+
+}
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.box img{
+  width: 25rem;
+  object-fit: cover;
+  display: block;
+}
+
+footer{
+  background-image: url(/img/skynight.png);
+
+}
+#footer-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    color: #fff;
+}
+
+/* content */
+
+h1{
+    text-align: center;
+    font-style: italic;
+    font-size: 2rem;
+    background-color: #093a6e88;
+    color: #fff;
+}
+
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  textarea{
+    max-width: 350px;
+    min-width: 350px;
+    max-height: 350px;
+    min-height: 100px;
+  }
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: .5s;
+  }
+  button:hover {
+    background-color: #0056b3;
+    transition: .2s;
+  }
