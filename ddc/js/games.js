@@ -22,7 +22,6 @@ const skel = {
   hearts: 1
 }
 
-
 function verificar(aleatorio){
   game.tentativaInp = parseInt(document.querySelector("input").value)
   let tentativa = game.tentativaInp
@@ -40,20 +39,15 @@ function verificar(aleatorio){
 
 
 function atack_skel(){
-  // comandos
   steve.hearts --
-  setTimeout(()=>{
-    skel.perso.src = './img/game/skel-a-1.png'
-    steve.perso.src = './img/game/steve-d-2.png'
-
-  },500)
-
-  skel.perso.src = './img/game/skel-base.png'
+  skel.perso.src = './img/game/skel-a-1.png'
   steve.perso.src = './img/game/steve-d-1.png'
+  steve.perso.style.transform = 'translate(0)'
+
+  setTimeout(()=>{
+    skel.perso.src = './img/game/skel-base.png'
+    steve.perso.src = './img/game/steve-d-2.png'
     switch (steve.hearts){
-      case 5:
-        steve.heart.src = './img/game/fiveheart.gif'
-        break
       case 4:
         steve.heart.src = './img/game/fourheart.gif'
         break
@@ -72,38 +66,33 @@ function atack_skel(){
       case _:
         console.log("Erro! valor de coração inválido!")
     }
-
-  setTimeout(()=>{
-    skel.perso.src = './img/game/skel-base.png'
-    steve.perso.src = './img/game/steve-base.png'
-    
-  },1000)
-
-
-}
-function atack_steve(){
-  // comandos
-  
-  skel.hearts --
-  setTimeout(()=>{
-    steve.perso.src = './img/game/steve-a-1.png'
-    steve.perso.style.transform = 'translateX(-30%) rotate(10deg);'
   },500)
 
   setTimeout(()=>{
-    steve.perso.style.transform = 'translateX(-60%) rotate(-40deg);'
+    steve.perso.src = './img/game/steve-base.png'},1000)
+
+  }
+function atack_steve(){
+  skel.hearts --
+    steve.perso.src = './img/game/steve-a-1.png'
+    steve.perso.style.transform = 'translateX(-30%) rotate(10deg)'
+
+
+  setTimeout(()=>{
+    steve.perso.src = './img/game/steve-base.png'
+    steve.perso.style.transform = 'translateX(-60%) rotate(-40deg)'
     switch (skel.hearts){
-      case 1:
-        steve.heart.src = './img/game/oneheart.gif'
       case 0:
         game.mensage.textContent = 'Você Ganhou!'
+        setTimeout(()=>{
+          steve.perso.classList.add('happy')
+          steve.perso.src = './img/game/steve-a-1.png'
+        },500)
       case _:
-        console.log("Erro! valor de coração inválido!")
+        console.log("Erro! valor de coração(skel) inválido!")
     }
-  },500)
+  },600)
 
-    skel.perso.src = './img/game/skel-base.png'
-    steve.perso.src = './img/game/steve-base.png'
 
 }
 
@@ -127,6 +116,9 @@ game.body.addEventListener("keydown",(event)=>{
     game.allTrysOut.textContent = game.allTrysjs
 
     // adicionar os coracoes voltando ao normal
+    steve.hearts = 5
+    skel.hearts = 1
+    steve.heart.src = './img/game/fiveheart.gif'
 
   }
 })

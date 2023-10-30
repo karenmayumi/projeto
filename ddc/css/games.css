@@ -96,6 +96,20 @@ footer{
 }
 .mensage{
     position: absolute;
-    top: 2%;
-    right: 2%;
+    bottom: 2%;
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.happy{
+    animation: happiness infinite 500ms;
+}
+@keyframes happiness {
+    0%{
+        transform: scaleX(1) translateX(0);
+    }
+    50%{
+        transform: scaleX(-1);
+    }
 }
