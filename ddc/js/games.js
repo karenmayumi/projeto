@@ -62,6 +62,7 @@ function atack_skel(){
         break
       case 0:
         game.mensage.textContent = 'Você Perdeu!'
+        steve.perso.style.transform = 'rotate(90deg) translateY(50%)'
         break
       case _:
         console.log("Erro! valor de coração inválido!")
@@ -84,6 +85,7 @@ function atack_steve(){
     switch (skel.hearts){
       case 0:
         game.mensage.textContent = 'Você Ganhou!'
+        skel.perso.style.transform = 'rotate(-90deg) translateY(50%)'
         setTimeout(()=>{
           steve.perso.classList.add('happy')
           steve.perso.src = './img/game/steve-a-1.png'
@@ -110,15 +112,6 @@ game.body.addEventListener("keydown",(event)=>{
 
 
   if(event.key == "r"){
-    aleatorio = Math.floor(Math.random()*100)
-    console.log(aleatorio)
-    game.allTrysjs = 0
-    game.allTrysOut.textContent = game.allTrysjs
-
-    // adicionar os coracoes voltando ao normal
-    steve.hearts = 5
-    skel.hearts = 1
-    steve.heart.src = './img/game/fiveheart.gif'
-
+    location.reload()
   }
 })
