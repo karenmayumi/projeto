@@ -61,10 +61,12 @@ function atack_skel(){
         steve.heart.src = './img/game/oneheart.gif'
         break
       case 0:
+        steve.heart.src = ''
         game.mensage.textContent = 'Você Perdeu!'
-        steve.perso.style.transform = 'rotate(90deg) translateY(50%)'
+        steve.perso.style.transform = 'rotate(90deg)'
         break
       case _:
+        steve.hearts = 1
         console.log("Erro! valor de coração inválido!")
     }
   },500)
@@ -85,7 +87,7 @@ function atack_steve(){
     switch (skel.hearts){
       case 0:
         game.mensage.textContent = 'Você Ganhou!'
-        skel.perso.style.transform = 'rotate(-90deg) translateY(50%)'
+        skel.perso.style.transform = 'rotate(-90deg)'
         setTimeout(()=>{
           steve.perso.classList.add('happy')
           steve.perso.src = './img/game/steve-a-1.png'
