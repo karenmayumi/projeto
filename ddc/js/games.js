@@ -7,7 +7,9 @@ const game = {
   allTrysOut : document.querySelector(".caixa_tent"),
   body : document.querySelector("body"),
   allTrysjs : total_tents = 0,
-  mensage : document.querySelector(".mensage")
+  mensage : document.querySelector(".mensage"),
+  reiniciar : document.querySelector("#dicareinicio"),
+  working : true
 }
 
 // ligação com as imagens
@@ -41,35 +43,42 @@ function verificar(aleatorio){
 function atack_skel(){
   steve.hearts --
   skel.perso.src = './img/game/skel-a-1.png'
-  steve.perso.src = './img/game/steve-d-1.png'
-  steve.perso.style.transform = 'translate(0)'
+  if(steve.hearts > 0){
+    steve.perso.src = './img/game/steve-d-1.png'
 
-  setTimeout(()=>{
-    skel.perso.src = './img/game/skel-base.png'
-    steve.perso.src = './img/game/steve-d-2.png'
-    switch (steve.hearts){
-      case 4:
-        steve.heart.src = './img/game/fourheart.gif'
-        break
-      case 3:
-        steve.heart.src = './img/game/threeheart.gif'
-        break
-      case 2:
-        steve.heart.src = './img/game/twoheart.gif'
-        break
-      case 1:
-        steve.heart.src = './img/game/oneheart.gif'
-        break
-      case 0:
-        steve.heart.src = ''
-        game.mensage.textContent = 'Você Perdeu!'
-        steve.perso.style.transform = 'rotate(90deg)'
-        break
-      case _:
-        steve.hearts = 1
-        console.log("Erro! valor de coração inválido!")
-    }
-  },500)
+    setTimeout(()=>{
+      skel.perso.src = './img/game/skel-base.png'
+      steve.perso.src = './img/game/steve-d-2.png'
+      switch (steve.hearts){
+        case 4:
+          steve.heart.src = './img/game/fourheart.gif'
+          break
+        case 3:
+          steve.heart.src = './img/game/threeheart.gif'
+          break
+        case 2:
+          steve.heart.src = './img/game/twoheart.gif'
+          break
+        case 1:
+          steve.heart.src = './img/game/oneheart.gif'
+          break
+        case _:
+          steve.hearts = 0
+          console.log("Erro! valor de coração inválido!")
+      }
+    },500)
+  }else{
+    setTimeout(()=>{
+      skel.perso.src = './img/game/skel-base.png'
+      game.mensage.textContent = 'Você Perdeu!'
+      game.working = false
+      steve.perso.style.transform = 'rotate(90deg) translate(40%, -10%)'
+      document.querySelector("input").classList.add('noselect')
+      game.reiniciar.focus()
+    },500)
+  }
+
+  
 
   setTimeout(()=>{
     steve.perso.src = './img/game/steve-base.png'},1000)
@@ -77,39 +86,35 @@ function atack_skel(){
   }
 function atack_steve(){
   skel.hearts --
-    steve.perso.src = './img/game/steve-a-1.png'
-    steve.perso.style.transform = 'translateX(-30%) rotate(10deg)'
-
-
+  steve.perso.src = './img/game/steve-a-1.png'
+  steve.perso.style.transform = 'translateX(-30%) rotate(10deg)'
+  document.querySelector("input").classList.add('noselect')
+  game.reiniciar.focus()
   setTimeout(()=>{
     steve.perso.src = './img/game/steve-base.png'
     steve.perso.style.transform = 'translateX(-60%) rotate(-40deg)'
-    switch (skel.hearts){
-      case 0:
-        game.mensage.textContent = 'Você Ganhou!'
-        skel.perso.style.transform = 'rotate(-90deg)'
+    skel.perso.style.transform = 'rotate(-15deg) translate(-5%, 5%)'
         setTimeout(()=>{
+          game.mensage.textContent = 'Você Ganhou!'
+          game.working = false
+          skel.perso.style.transform = 'rotate(-90deg) translate(-40%, -10%)'
           steve.perso.classList.add('happy')
           steve.perso.src = './img/game/steve-a-1.png'
-        },500)
-      case _:
-        console.log("Erro! valor de coração(skel) inválido!")
-    }
-  },600)
-
-
+        },650)
+    
+  },700)
 }
 
 game.body.addEventListener("keydown",(event)=>{
   if(event.key == "Enter"){
-    if (verificar(aleatorio) == false){
+    if (verificar(aleatorio) == false && game.working == true){
       atack_skel()
-      // codigo da animacao do steve
-
+      
     }
-    else{
+    else if(game.working == true){
       atack_steve()
     }
+    
   }
 
 
