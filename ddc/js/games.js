@@ -97,6 +97,8 @@ function atack_steve(){
         setTimeout(()=>{
           game.mensage.textContent = 'Você Ganhou!'
           game.working = false
+          document.querySelector("input").classList.add('noselect')
+          game.reiniciar.focus()
           skel.perso.style.transform = 'rotate(-90deg) translate(-40%, -10%)'
           steve.perso.classList.add('happy')
           steve.perso.src = './img/game/steve-a-1.png'
