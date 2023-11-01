@@ -8,6 +8,7 @@ const game = {
   body : document.querySelector("body"),
   allTrysjs : total_tents = 0,
   mensage : document.querySelector(".mensage"),
+  mensage2: document.querySelector(".mensage2"),
   reiniciar : document.querySelector("#dicareinicio"),
   working : true
 }
@@ -27,16 +28,20 @@ const skel = {
 function verificar(aleatorio){
   game.tentativaInp = parseInt(document.querySelector("input").value)
   let tentativa = game.tentativaInp
-  if(tentativa == aleatorio){game.dicaOut.textContent = "O número inserido é o aleatório!"
-    return true
+  if (game.working == true){
+    if(tentativa == aleatorio){game.dicaOut.textContent = "O número inserido é o aleatório!"
+      return true
+    }
+    else{
+      if(tentativa > aleatorio){game.dicaOut.textContent = "O número aleatório é MENOR que o inserido!"}
+      else{game.dicaOut.textContent = "O número aleatório é MAIOR que o inserido!"}
+      game.allTrysjs ++
+      game.allTrysOut.textContent = game.allTrysjs
+      return false
+    }   
+  }else{
+    game.mensage2.textContent = 'Jogo finalizado. Reinicie a página ou aperte "R" para jogar novamente!'
   }
-  else{
-    if(tentativa > aleatorio){game.dicaOut.textContent = "O número aleatório é MENOR que o inserido!"}
-    else{game.dicaOut.textContent = "O número aleatório é MAIOR que o inserido!"}
-    game.allTrysjs ++
-    game.allTrysOut.textContent = game.allTrysjs
-    return false
-  }   
 }
 
 
@@ -109,6 +114,7 @@ function atack_steve(){
 
 game.body.addEventListener("keydown",(event)=>{
   if(event.key == "Enter"){
+
     if (verificar(aleatorio) == false && game.working == true){
       atack_skel()
       
