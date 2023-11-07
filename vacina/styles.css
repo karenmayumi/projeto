@@ -29,15 +29,15 @@ section{
 }
 #inicio{
     --bg-color: #6e7fc9;
-    background-image: url(/img/bg1.jpg);
+    background-image: url(./img/bg1.jpg);
 }
 #objetivo{
     --bg-color: #b58deb;
-    background-image: url(/img/bg2.jpg);
+    background-image: url(./img/bg2.jpg);
 }
 #calendario{
     --bg-color: #7e88c2;
-    background-image: url(/img/bg3.jpg);
+    background-image: url(./img/bg3.jpg);
 }
 footer{
     --bg-color: #0a3261;
