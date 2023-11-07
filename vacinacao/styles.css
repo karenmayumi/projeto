@@ -1,0 +1,255 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 1rem sans-serif;
+    /* outline: 1px rgba(255, 0, 0, 0.411) solid; */
+
+}
+:root{
+    --bg-color: #6ebfc9;
+    --section-height: 5rem;
+}
+html {
+    scroll-behavior: smooth;
+}
+section{
+    min-height: 100vh;
+    height: fit-content;
+    background-color: var(--bg-color);
+    background-size: calc(100vh * 2.2) 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: to right;
+    position: relative;
+    padding: var(--section-height) 10rem;
+}
+#inicio{
+    --bg-color: #6e7fc9;
+    background-image: url(/img/bg1.jpg);
+}
+#objetivo{
+    --bg-color: #b58deb;
+    background-image: url(/img/bg2.jpg);
+}
+#calendario{
+    --bg-color: #7e88c2;
+    background-image: url(/img/bg3.jpg);
+}
+footer{
+    --bg-color: #0a3261;
+}
+
+#inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+#inicio h3{
+    font-size: 3rem;
+    font-weight: 600;
+}
+#inicio li{
+    text-align: center;
+    list-style: none;
+}
+.projeto{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.projeto p{
+    width: 15rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+a:not(.nav-item){
+    font: bolder 2rem sans-serif;
+    color: #292929;
+    background-color: #fff;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color .3s, color .3s;
+}
+a:hover:not(.nav-item),
+a:focus-visible{
+    color: #000;
+    background-color: #acadb6;
+}
+
+#objetivo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#objetivo .text{
+    width: 80%;
+}
+#objetivo h3{
+    font-size: 4rem;
+}
+#objetivo li{
+    width: 100%;
+    font-size: 1.5rem;
+}
+.desc{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+
+    & p{
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    
+    & p:nth-child(2){
+        font-size: 1.5rem;
+    }
+
+}
+
+#calendario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 20rem;
+}
+
+#calendario > p{
+    font-size: 2rem;
+}
+
+footer{
+    --bg-color: rgb(4, 30, 80);
+    background-color: var(--bg-color);
+    color: #fff;
+    padding: 5rem;
+    text-align: center;
+}
+
+footer p:nth-child(1){
+    font-size: 2.5rem;
+}
+
+/* header */
+header{
+    width: 100%;
+    padding: 3vh 100px;
+    background-color: #ffffff99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    backdrop-filter: blur(5px);
+}
+nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+nav ul{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    list-style: none;
+}
+.nav-item{
+    font: bolder 3rem sans-serif;
+    color: aliceblue;
+    position: relative;
+    text-shadow: 1px 1px 10px #13bde7;
+    text-decoration: none;
+    text-transform: uppercase;
+    bottom: 0;
+    padding: 10px 20px;
+    
+}
+.nav-item::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border-bottom: .3rem solid #1b7eb8;
+    border-radius: 10px;
+    transition: .5s;
+}
+.nav-item:hover{
+    color: #fff;
+}
+.nav-item:hover::after,
+.nav-item:focus-visible::after{
+    width: 100%;
+}
+
+
+@media (max-width: 1100px) {
+
+    .nav-item{
+        font-size: 2rem;
+    }
+
+    #objetivo h3{
+        font-size: 2rem;
+    }
+    #objetivo li{
+        font-size: 1.2rem;
+    }
+
+    section{
+        padding: 0 1.5rem;
+    }
+    li{
+        width: 100%;
+    }
+    #inicio h3{
+        font-size: 2rem;
+    }
+    a{
+        font-size: 1.5rem;
+    }
+    #calendario{
+        padding: 15rem;
+    }
+}
+
+    @media (max-width: 800px) {
+    
+    section{
+    padding: var(--section-height) 1rem;
+    }
+
+    nav{
+        justify-content: space-around;
+        gap: 0;
+    }
+    nav ul{
+        justify-content: center;
+        gap: 1rem;
+    }
+    .nav-item{
+        font-size: 1.25rem;
+        padding: 7px 15px;
+    }
+    #calendario{
+        padding: 2rem;
+    }
+    
+}
