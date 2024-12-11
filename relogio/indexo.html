@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="styleo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+</head>
+<body>
+    <div class="td">
+        <div class="relogio">
+            <div class="cx" id="hr"></div>
+            <div class="cx" id="mn"></div>
+            <div class="cx" id="sg"></div>
+        </div>
+        
+        <div class="base">
+            <div class="divdiasem">
+                <div class="dia-sem" id="diasem"></div>
+            </div>
+            <div class="data">
+                <div class="cxx" id="di"></div>/
+                <div class="cxx" id="me"></div>/
+                <div class="cxx" id="an"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        setInterval(()=>{
+            const hoje = new Date()
+            let hrhtml = document.querySelector("#hr")
+            let hora = hoje.getHours()
+
+            let mnhtml = document.querySelector("#mn")
+            let minuto = hoje.getMinutes()
+
+            let sghtml = document.querySelector("#sg")
+            let segundo = hoje.getSeconds()
+            
+            let disemhtml = document.querySelector("#diasem")
+            let diasemana = hoje.getDay()
+
+            let diahtml = document.querySelector("#di")
+            let dia = hoje.getDate()
+            
+            let meshtml = document.querySelector("#me")
+            let mes = hoje.getMonth() + 1
+
+            let anohtml = document.querySelector("#an")    
+            let ano = hoje.getFullYear()
+
+            //===adicionar zero===//
+            if(segundo<=9){
+                segundo = '0' + segundo
+            }
+            if(minuto<=9){
+                minuto = '0' + minuto
+            }
+            if(hora<=9){
+                hora = '0' + hora
+            }
+            if(mes<=9){
+                mes = '0' + mes
+            }
+
+            //===hora===//
+            hrhtml.textContent = hora
+            mnhtml.textContent = minuto
+            sghtml.textContent = segundo
+
+            //===data===//
+            diahtml.textContent = dia
+            meshtml.textContent = mes 
+            anohtml.textContent = ano
+            
+            //===dia-semana===//
+            switch(diasemana){
+                case 1: disemhtml.textContent = "Segunda-Feira"; break;
+                case 2: disemhtml.textContent = "Terça-Feira"; break;
+                case 3: disemhtml.textContent = "Quarta-Feira"; break;
+                case 4: disemhtml.textContent = "Quinta-Feira"; break;
+                case 5: disemhtml.textContent = "Sexta-Feira"; break;
+                case 6: disemhtml.textContent = "Sábado-Feira"; break;
+                case 7: disemhtml.textContent = "Domingo-Feira"; break;
+                default: disemhtml.textContent = "Erro. Dia da semana inexistente"; break;
+            }
+        })
+    </script>
+</body>
+</html>
