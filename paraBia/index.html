@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Para Bia</title>
+</head>
+<body>
+    <main>
+        <h1>Para Bia...</h1>
+        <button id="btn1">Ver</button>
+        <div id="ver">
+            <p>Todos os intervalos e almoços, com a sua presença, se tornam sempre boas memórias.</p>
+            <p>Espero que após a nossa formatura, possamos manter contato e compartilhar nossas conquistas e dificuldades juntos.</p>
+            <p>Agradeço muito todo o suporte <3</p>
+            <button id="brilhe">Clique em mim freneticamente</button>
+            <p class="obs">Passe o mouse encima das estrelas*</p>
+        </div>
+        <div class="star s1"></div>
+        <div class="star s2"></div>
+        <div class="star s3"></div>
+        <div class="star s4"></div>
+        <div class="star s5"></div>
+        <div class="star s6"></div>
+        <div class="star s7"></div>
+        <div class="star s8"></div>
+        </main>
+    <script>
+        function gerarBrilho(){
+            var el = document.createElement('div')
+            el.classList.add('brilhar');
+            var x = Math.random() * window.innerWidth;
+            var y = Math.random() * window.innerHeight;
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
+            const main = document.querySelector('main');
+            main.appendChild(el);
+            setTimeout(function() {
+                el.remove();
+            }, 2000);
+        }
+        function gerarBrilhos(x){
+            for(var i = 1; i<= x; i++){
+                setTimeout(function() {
+                    gerarBrilho();
+                },(i-1)*750);
+            }
+        }
+        document.getElementById('btn1').addEventListener('click', function() {
+            document.getElementById('ver').classList.add('visible');
+            document.getElementById('btn1').style.display = 'none';
+        });
+        document.getElementById('brilhe').addEventListener('click', function() {
+            gerarBrilhos(3);
+        });
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseover',()=>{
+                star.classList.add('starMoving');
+            setTimeout(() => {
+                star.classList.remove('starMoving');
+            }, 1000);
+            })
+        });
+    </script>
+</body>
+</html>

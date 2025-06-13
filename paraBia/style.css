@@ -1,0 +1,151 @@
+*,
+*::after,
+*::before{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(45deg, rgb(18, 77, 130), rgb(25, 5, 80));
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    color: #fff;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+.brilhar{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    animation: brilhar 1s ease-out;
+    z-index: 10;
+    pointer-events: none;
+}
+#brilhe{
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    pointer-events: all;
+    font-style: italic;
+    cursor: pointer;
+    transition: background-color .3s;
+    &:hover{
+        background-color: #134676;
+        color: #fff;
+    }
+    &:active{
+        background-color: #031e76;
+    }
+}
+@keyframes brilhar {
+    0%{
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+    24%{
+        --cor: rgb(239, 13, 137);
+    }
+    39%{
+        --cor: rgb(177, 93, 255);
+    }
+    50%{
+        --cor: rgba(255, 252, 234);
+        box-shadow: 0 0 15rem 5rem var(--cor);
+    }
+}
+.star{
+    background-image: url(./star.gif);
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    aspect-ratio: 1;
+    position: absolute;
+}
+.star.s1 {
+    left:2rem;
+    top: 8rem;
+    scale: 2.3;
+}
+.star.s2 {
+    right:9rem;
+    top: 11rem;
+    scale: 1.3;
+}
+.star.s3 {
+    right:14rem;
+    top: 52%;
+}
+.star.s4 {
+    left:43%;
+    bottom: 1.5rem;
+}
+.star.s5 {
+    left:3rem;
+    bottom: 6rem;
+    scale: 1.3;
+}
+.star.s6 {
+    left:40%;
+    top: 3rem;
+    scale: .9;
+}
+.star.s7 {
+    right:6rem;
+    bottom: 4rem;
+    scale: 2.3;
+}
+.star.s8 {
+    left:16rem;
+    bottom: 20rem;
+    scale: 1.4;
+}
+.starMoving{
+    animation: girar 1s ease-in-out infinite;
+}
+@keyframes girar {
+    0%{
+        rotate: 0;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+#ver{
+    display: none;
+}
+#ver.visible{
+    display: block;
+}
+#btn1{
+    padding: .7rem 1.2rem;
+    font-size: 1.05rem;
+    border-radius: 2rem;
+    pointer-events: all;
+    cursor: pointer;
+    transition: background-color .3s;
+    &:hover{
+        background-color: #134676;
+        color: #fff;
+    }
+    &:active{
+        background-color: #031e76;
+    }
+}
+p{
+    font-size: 1.2rem;
+    width: 35rem;
+}
+.obs{
+    color: #cecece;
+    font-style: italic;
+}
