@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@500&display=swap');
 *,
 *::after,
 *::before{
@@ -15,13 +16,18 @@ body{
     display: grid;
     place-items: center;
     color: #fff;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
     text-align: center;
 }
 .brilhar{
@@ -110,7 +116,7 @@ main{
     scale: 1.4;
 }
 .starMoving{
-    animation: girar 1s ease-in-out infinite;
+    animation: girar 1s ease-in-out;
 }
 @keyframes girar {
     0%{
@@ -121,10 +127,12 @@ main{
     }
 }
 #ver{
-    display: none;
+    height: 0;
+    transition: height 2s;
+    overflow: hidden;
 }
-#ver.visible{
-    display: block;
+.visible{
+    height: 20rem !important;
 }
 #btn1{
     padding: .7rem 1.2rem;
@@ -132,7 +140,8 @@ main{
     border-radius: 2rem;
     pointer-events: all;
     cursor: pointer;
-    transition: background-color .3s;
+    transition: background-color .3s, opacity .5s, height .5s;
+    opacity: 1;
     &:hover{
         background-color: #134676;
         color: #fff;
@@ -148,4 +157,9 @@ p{
 .obs{
     color: #cecece;
     font-style: italic;
+}
+h1{
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-size: 3.5rem;
 }
